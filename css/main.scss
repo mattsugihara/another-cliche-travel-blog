@@ -1,0 +1,117 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);
+
+
+// Our variables
+$base-font-family: "Work Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   18px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.8;
+
+$text-color:       #212121;
+$background-color: #fdfdfd;
+$link-color: #1974d1;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+
+body{
+	border: 0;
+	outline:0;
+	color: $text-color;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	font-family: $base-font-family;
+	font-weight: $base-font-weight;
+}
+
+a{
+	text-decoration: none;
+	color: $link-color;
+}
+
+b, strong{
+	font-weight: 600;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+p{
+	padding-bottom:1rem;
+}
+
+ol,ul{
+	margin-left:2rem;
+	padding-bottom: 1rem;
+}
+
+.wrapper {
+	width: 100%;
+	background: $background-color;
+}
+
+.content{
+	width:100%;
+	max-width: 45rem;
+	margin:0 auto;
+	padding:0 1rem;
+}
+
+#masthead{
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.post-list{
+	list-style: none;
+	margin:0;
+}
+
+.post-list-item{
+	padding:1rem 0;
+
+	h2{
+		font-size: 2rem;
+		font-weight: 700;
+		padding-bottom: 1rem;
+
+		a{
+			color: $text-color;
+		}
+	}
+}
+
+figure{	
+	padding-bottom: 1.5rem;
+	
+	img{
+		max-height: 95vh;
+		width:auto;
+		max-width: 100%;
+		display: block;
+	}
+
+	figcaption{
+		font-size: .75rem;
+		line-height: 1.4;
+		color:#767676;
+		padding-top: .25rem;
+	}
+}
+

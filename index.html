@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<header id="masthead">
+	<div>
+		<h1>another cliché travel blog</h1>
+		<p>a badly kept travel journal</p>
+	</div>
+</header>
+<div class="wrapper">
+	<div class="content">
+		<ul class="post-list">
+			{% for post in site.posts %}
+			<li class="post-list-item">
+				<h2>
+					<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+				</h2>
+				{{ post.content }}
+				{% endfor %}
+			</li>
+		</ul>
+	</div>
+</div>
