@@ -6,7 +6,7 @@ for (var i = allImages.length - 1; i >= 0; i--) {
 }
 
 
-//open the lightbox
+
 function openLightbox(figureID) {
 	var imgURL = document.getElementById(figureID).getElementsByTagName('img')[0].src;
 	var imgCaption = document.getElementById(figureID).getElementsByTagName('figcaption')[0].innerHTML;
@@ -19,17 +19,32 @@ function openLightbox(figureID) {
 }
 
 
-//prime the image to open the lightbox and fill the image appropriately
+function closeLightbox() {
+	document.getElementById('lightbox-shade').style.display='none';
+	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>"
+}
+
+
+
+function parseKeyPress(event) {
+	switch (event.keyCode) {
+	    case 27:
+	        closeLightbox();
+	        break;
+	}
+}
+
+
+
 function lightboxListener(figureID) {
-	document.getElementById(figureID).getElementsByTagName('img')[0].addEventListener('click',function(){
+	document.getElementById(figureID).getElementsByTagName('a')[0].addEventListener('click',function(){
 		event.preventDefault();
 		openLightbox(figureID);
 	});
 }
 
 
-//close the damn lightbox
-document.getElementById('lightbox-shade').addEventListener('click',function(){
-	document.getElementById('lightbox-shade').style.display='none';
-	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>"
-})
+document.getElementById('lightbox-shade').addEventListener('click',closeLightbox);
+document.addEventListener('keydown',function(){
+	parseKeyPress(event);
+});
