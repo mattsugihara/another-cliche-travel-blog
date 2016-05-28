@@ -5,4 +5,4 @@ layout: post
 ---
 
 Let's do this
-{% include image.html name="image_045.jpg" %}
+{% include image.html name="thailand/image_045.jpg" %}

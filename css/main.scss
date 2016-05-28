@@ -3,7 +3,7 @@
 ---
 @charset "utf-8";
 /*@import url(https://fonts.googleapis.com/css?family=Work+Sans:400,600);*/
-@import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700);
+
 
 
 // Our variables
@@ -33,6 +33,10 @@ body{
 	line-height: $base-line-height;
 	font-family: $base-font-family;
 	font-weight: $base-font-weight;
+}
+
+h1{
+	line-height: 2.5rem;
 }
 
 a{
@@ -91,6 +95,7 @@ h2 a{
 		width:auto;
 		max-width: 100%;
 		display: block;
+		box-shadow: 0px 0px 2px rgba(0,0,0,.4);
 	}
 
 	figcaption{
@@ -107,16 +112,18 @@ h2 a{
 	right:0;
 	bottom:0;
 	left:0;
-	background: rgba(255,255,255,.8);
 	display: none;
 	align-items: center;
 	justify-content: center;
 	cursor:zoom-out;
+	background: rgba(255,255,255,.8);
+	background: -webkit-radial-gradient(rgba(255,255,255,.8), rgba(0,0,0,.6)); /* Safari 5.1 to 6.0 */
+	background:	   -moz-radial-gradient(rgba(255,255,255,.8), rgba(0,0,0,.6)); /* For Firefox 3.6 to 15 */
+	background:      -o-radial-gradient(rgba(255,255,255,.8), rgba(0,0,0,.6)); /* For Opera 11.6 to 12.0 */
+	background: 		radial-gradient(rgba(255,255,255,.8), rgba(0,0,0,.6)); /* Standard syntax */
 }
 
 #lightbox{
-	max-height: 95vh;
-	max-width: 95vw;
 	display: inline-block;
 	background:$background-color;
 	box-shadow: 0 10px 40px rgba(0,0,0,.4);
@@ -128,7 +135,7 @@ h2 a{
 		display: inline-block;
 		vertical-align: top;
 		max-width:100%;
-		max-height:80vh;
+		max-height:90vh;
 	}
 
 	figcaption{
@@ -137,4 +144,25 @@ h2 a{
 		line-height: 1.4;
 		color: $secondary-text;
 	}
+}
+
+.post-header, .post{
+	padding: 1rem 1rem 0 1rem;
+}
+@media screen and (min-width: 48rem) {
+	.post-header{
+		display: inline-block;
+		width: 35%;
+		vertical-align: top;
+		text-align: right;
+	}
+
+	.post{
+		display: inline-block;
+		width: 65%;
+	
+		>*{
+			max-width: 45rem;
+		}
+	}	
 }

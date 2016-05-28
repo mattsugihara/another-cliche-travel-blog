@@ -7,13 +7,9 @@ layout: default
 	<time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
 		{{ page.date | date: "%b %-d, %Y" }}
 	</time>
-</header>
-<div class="wrapper">
-	<div class="content">
-		<article class="post">
-			<div class="post-content" itemprop="articleBody">
-				{{ content }}
-			</div>
-		</article>
+</header><!--
+--><article class="post">
+	<div class="post-content" itemprop="articleBody">
+		{{ content }}
 	</div>
-</div>
+</article>

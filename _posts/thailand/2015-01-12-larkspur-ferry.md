@@ -3,7 +3,7 @@ title: "Larkspur Ferry"
 pubdate: "2015-01-12 12:19:14"
 layout: post
 ---
-{% include image.html name="IMG_3077.jpg" caption="#nofilter" %}
+{% include image.html name="thailand/IMG_3077.jpg" caption="#nofilter" %}
 
 I can't figure out why I love taking the Larkspur ferry. Something about being completely removed from the effort of getting into the city, maybe. No traffic, no Bart trains screaming under the bay, no choice. You *will* end up in SF, but right now, for the next thirty minutes, you're stuck. I know it's more than the views of the bay, the Golden Gate, both spans of the Bay, downtown SF, because even fogged in, the charm is there. Maybe it's lingering memories, or simply being on the water. Maybe having that much space to move around while in transit really is *that* luxurious. Planes, cars, and muni, even without the smell of piss, are cramped and uncomfortable. Trains are a step up. Maybe the 1800s had this travel thing figured out. Now, if only we could bring back the blimp...
 

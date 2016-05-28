@@ -8,11 +8,11 @@ First, I want you to know that I'm not mad, I'm just disappointed. How could I n
 
 Fifteen years ago, us 'Muricans counted ourselves lucky if the vending machine didn't eat our coins when we wanted to buy pretzels. Taking bills was an unreliable novelty. Your vending machines dispensed hot tea at a card swipe. (They also dispensed something called Pocari Sweat which I still haven't figure out, but that's neither here nor there). This is where you were at all those years ago:
 
-{% include image.html name="image_001.jpg" caption="2015" %}
+{% include image.html name="thailand/image_001.jpg" caption="2015" %}
 
 This is where you are now:
 
-{% include image.html name="image_001.jpg" caption="2006" %}
+{% include image.html name="thailand/image_001.jpg" caption="2006" %}
 
 I saved myself the trouble of digging through my old photo album and scanning a vending machine photo-U.S. Phones didn't have cameras at that point
 

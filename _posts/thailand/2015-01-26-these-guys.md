@@ -6,4 +6,4 @@ layout: post
 
 Met up with the last two of our group!
 
-{% include image.html name="IMG_0111.jpg" caption="Amanda and Jason" %}
+{% include image.html name="thailand/IMG_0111.jpg" caption="Amanda and Jason" %}
