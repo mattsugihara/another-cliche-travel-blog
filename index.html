@@ -3,18 +3,25 @@ layout: default
 ---
 
 <header id="masthead">
-	<div class="content">
+	<div>
 		<h1>another cliché travel blog</h1>
 		<p>a badly kept travel journal</p>
 	</div>
 </header>
-<div class="content">
-	{% for post in site.posts %}
-	<article>
+{% for post in site.posts %}
+	<section>
+		<header class="post-header">
 		<h2>
 			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 		</h2>
-		{{ post.content }}
-	</article>
-	{% endfor %}
-</div>
+		<time datetime="{{ post.date | date_to_xmlschema }}">
+			{{ post.date | date: "%B %-d, %Y" }}
+		</time>
+		</header><!--
+		--><article class="post">
+			<div class="post-content">
+				{{ post.content }}
+			</div>
+		</article>
+	</section>
+{% endfor %}

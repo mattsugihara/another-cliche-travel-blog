@@ -7,12 +7,42 @@
 
 # Site settings
 title: another cliché travel blog
-email: mattsugihara@gmail.com
 url: "http://antoherclichetravelblog.com" # the base hostname & protocol for your site
-twitter_username: mattsugihara
-github_username:  mtsugi
 
 # Build settings
 markdown: kramdown
-permalink: :title/
-baseurl: ""
+permalink: :categories/:title/
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "post"
+
+gems:
+  - jekyll-gallery-generator
+
+gallery:
+  # path to the gallery
+  dir: images
+  # title for gallery index
+  title: "Photos"
+  # title prefix for gallery page. title=title_prefix+gallery_name
+  title_prefix: "Photos: "
+  # field to control sorting of galleries for the index page
+  # (possible values are: title, date_time, best_image)
+  sort_field: "date_time"
+  # sizes for thumbnails
+  thumbnail_size:
+    x: 400
+    y: 400
+  # custom configuration for individual gallery
+  # best_image is image for the index page (defaults to last image)
+  # galleries:
+  #   chile_trip:
+  #     best_image: IMG_1068.JPG
+  #   japan_trip:
+  #     best_image: IMG_0690.JPG
+  #   best:
+  #     best_image: snaileo_gonzales.jpg
