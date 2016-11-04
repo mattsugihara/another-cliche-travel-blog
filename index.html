@@ -2,11 +2,23 @@
 layout: default
 ---
 
-<header id="masthead">
-	<div>
-		<h1>another cliché travel blog</h1>
-		<p>a badly kept travel journal</p>
+<header>
+	<div id="cover">
+		<div>
+			<h1>another cliché travel blog</h1>
+			<h2>a badly kept travel journal</h2>
+		</div>
 	</div>
+	<nav>
+		<ul>
+			<li><a href="/kauai/">Kauai</a></li>
+			<li><a href="/iceland/">Iceland and Norway</a></li>
+			<li><a href="/costa-rica/">Costa Rica</a></li>
+			<li><a href="/singapore/">Singapore</a></li>
+			<li><a href="/india/">India</a></li>
+			<li><a href="/thailand/">Thailand</a></li>
+		</ul>
+	</nav>
 </header>
 {% for post in site.posts %}
 	<section>
@@ -17,8 +29,8 @@ layout: default
 		<time datetime="{{ post.date | date_to_xmlschema }}">
 			{{ post.date | date: "%B %-d, %Y" }}
 		</time>
-		</header><!--
-		--><article class="post">
+		</header>
+			<article class="post">
 			<div class="post-content">
 				{{ post.content }}
 			</div>

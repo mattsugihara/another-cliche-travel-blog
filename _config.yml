@@ -25,7 +25,7 @@ gems:
 
 gallery:
   # path to the gallery
-  dir: images
+  dir: images/
   # title for gallery index
   title: "Photos"
   # title prefix for gallery page. title=title_prefix+gallery_name

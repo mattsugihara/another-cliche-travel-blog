@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-{% for post in site.categories"iceland" %}
+{% for post in site.categories"iceland" reversed %}
 <section>
 	<header class="post-header">
 	<h2>
@@ -10,8 +10,8 @@ layout: default
 	<time datetime="{{ post.date | date_to_xmlschema }}">
 		{{ post.date | date: "%B %-d, %Y" }}
 	</time>
-	</header><!--
-	--><article class="post">
+	</header>
+	<article class="post">
 		<div class="post-content">
 			{{ post.content }}
 		</div>

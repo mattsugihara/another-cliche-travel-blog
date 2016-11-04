@@ -6,27 +6,27 @@
 
 
 // variables
-$base-font-family:	Inconsolata, "PT Sans", sans-serif;
-$caption-font-family: Inconsolata, "PT Sans Caption", sans-serif;
+$base-font-family:	"Cutive Mono", "Courier New", sans-serif;
+$caption-font-family: $base-font-family;
 $base-font-size:	18px;
 $base-font-weight:	400;
 $small-font-size: 	$base-font-size * 0.66666666666666;
-$base-line-height:	1.8;
+$base-line-height:	2rem;
 
-$primary-text:      #212121;
+$primary-text:      #212138;
 $secondary-text:	#767676;
 $background-color:	#FAFAFA;
 $link-color:		#1974d1;
 
 *{
-	margin:0;
-	padding:0;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 }
 
 body{
 	border: 0;
-	outline:0;
+	outline: 0;
 	color: $primary-text;
 	background: $background-color;
 	font-size: $base-font-size;
@@ -53,20 +53,16 @@ a:hover{
 }
 
 p{
-	padding-bottom:1rem;
-}
-
-ol,ul{
-	margin-left:2rem;
 	padding-bottom: 1rem;
 }
 
-article{
-	display: inline-block;
+ol,ul{
+	margin-left: 2rem;
+	padding-bottom: 1rem;
 }
 
 section{
-	margin-bottom: 20rem;
+	margin-bottom: 10rem;
 }
 
 h2{
@@ -74,11 +70,11 @@ h2{
 	display: inline-block;
 
 	a{
-		color:$primary-text;
+		color: $primary-text;
 
 		&:hover{
-			text-decoration:none;
-			color:$link-color;
+			text-decoration: none;
+			color: $link-color;
 		}
 	}
 }
@@ -88,34 +84,35 @@ time{
 }
 
 .post-content{
-	padding-top:3px;
+	padding-top: 2px;
 }
 
-#masthead{
+#cover{
 	height: 100vh;
-	position: relative;
+	padding:1rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #767676 url('/images/cover/bg-small.jpg') center center;
+	background-size: cover;
+	text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+	color: #FFFFFF;
 
-	div{
-		position: absolute;
-		top:50%;
-		padding-left: 1rem;
-		margin-top: -5.5rem;
-	}
 }
 
 .image-figure{	
 	padding-bottom: 1.5rem;
 
 	a{
-		cursor:zoom-in;
+		cursor: zoom-in;
 	}
 	
 	img{
 		max-height: 95vh;
-		width:auto;
+		width: auto;
 		max-width: 100%;
 		display: block;
-		box-shadow: 0px 0px 2px rgba(0,0,0,.4);
+		
 	}
 
 	figcaption{
@@ -129,14 +126,14 @@ time{
 
 #lightbox-shade{
 	position: fixed;
-	top:0;
-	right:0;
-	bottom:0;
-	left:0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
 	display: none;
 	align-items: center;
 	justify-content: center;
-	cursor:zoom-out;
+	cursor: zoom-out;
 	background: rgba(255,255,255,.8);
 	background: -webkit-radial-gradient(rgba(255,255,255,.8), rgba(0,0,0,.6)); /* Safari 5.1 to 6.0 */
 	background:	   -moz-radial-gradient(rgba(255,255,255,.8), rgba(0,0,0,.6)); /* For Firefox 3.6 to 15 */
@@ -145,22 +142,27 @@ time{
 }
 
 #lightbox{
-	display: inline-block;
-	background:$background-color;
+	width: 100vw;
+	height: 100vh;
+	background: $background-color;
 	box-shadow: 0 10px 40px rgba(0,0,0,.4);
-	border-radius:2px;
 	overflow: hidden;
-	
+	position: absolute;
+	top: 0;
 
 	img{
-		display: inline-block;
-		vertical-align: top;
-		max-width:100%;
-		max-height:100vh;
+		position: absolute;
+		top: 0;
+		left: 0;
 	}
 
 	figcaption{
-		padding:.5rem;
+		position: absolute;
+		background: rgba(255,255,255,.95);
+		top: 0;
+		right: 0;
+		left: 0;
+		padding: .5rem;
 		font-size: .75rem;
 		line-height: 1.4;
 		color: $secondary-text;
@@ -172,21 +174,50 @@ time{
 }
 
 
+/*medium up*/
 @media screen and (min-width: 48rem) {
 
-	#masthead div{
-		left:35%;
+	#cover{
+		background: #767676 url('/images/cover/bg-medium.jpg') center center;
+		background-size: cover;
+	}
+
+	nav{
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+
+		ul{
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			display: flex;
+			justify-content: space-around;
+			background: rgba(250,250,250,.8);
+		}
+
+		a{
+			padding: 1rem;
+			display: inline-block;
+			vertical-align: top;
+		}
 	}
 
 	.post-header{
-		display: inline-block;
+		float: left;
+		clear: left;
 		width: 35%;
 		vertical-align: top;
 		text-align: right;
+
+		h2{
+			max-width: 20rem;
+		}
 	}
 
 	.post{
-		display: inline-block;
+		float: left;
 		width: 65%;
 	
 		p,blockquote{
@@ -197,7 +228,12 @@ time{
 			max-width: 38rem;
 		}
 	}
-	.post-header h2{
-		max-width: 20rem;
-	}	
+}
+
+@media screen and (min-width: 80rem) {
+
+	#cover{
+		background: #767676 url('/images/cover/bg-large.jpg') center center;
+		background-size: cover;
+	}
 }
