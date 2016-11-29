@@ -11,6 +11,7 @@ layout: default
 	</div>
 	<nav>
 		<ul>
+			<li><a href="/cuba/">Cuba</a></li>
 			<li><a href="/kauai/">Kauai</a></li>
 			<li><a href="/iceland/">Iceland and Norway</a></li>
 			<li><a href="/costa-rica/">Costa Rica</a></li>
@@ -21,19 +22,17 @@ layout: default
 	</nav>
 </header>
 {% for post in site.posts %}
-	<section>
-		<header class="post-header">
-		<h2>
-			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-		</h2>
-		<time datetime="{{ post.date | date_to_xmlschema }}">
-			{{ post.date | date: "%B %-d, %Y" }}
-		</time>
-		</header>
-			<article class="post">
-			<div class="post-content">
-				{{ post.content }}
-			</div>
-		</article>
-	</section>
+<article>
+	<header class="post-header">
+	<h2>
+		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date: "%B %-d, %Y" }}
+	</time>
+	</header>
+	<div class="post">
+		{{ post.content }}
+	</div>
+</article>
 {% endfor %}
