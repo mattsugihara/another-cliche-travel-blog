@@ -97,8 +97,11 @@ time{
 	background: #767676 url('/images/cover/bg-small.jpg') center center;
 	background-size: cover;
 	text-shadow: 0px 0px 10px rgba(0,0,0,.5);
-	color: #FFFFFF;
+}
 
+#cover a{
+	color: #FFFFFF;
+	text-decoration: none
 }
 
 .image-figure{	

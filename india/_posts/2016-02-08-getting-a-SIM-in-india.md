@@ -2,7 +2,7 @@
 title: "Getting a SIM in India"
 ---
 
-##Things you need
+## Things you need
 1. Photocopy of your passport*
 2. A passport photo
 3. A copy of your visa*
@@ -11,7 +11,7 @@ title: "Getting a SIM in India"
 
 *if you don't have copies of those, they may have a photocopier there. Or they may not.
 
-##The process
+## The process
 1. Have an unlocked phone
 2. Find a shop that sells SIM cards. Vodaphone and idea both seem reliable.
 3. Tell them you want a SIM

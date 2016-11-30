@@ -11,32 +11,99 @@ url: "http://antoherclichetravelblog.com" # the base hostname & protocol for you
 
 # Build settings
 markdown: kramdown
-permalink: :categories/:title/
+# permalink: :categories/:title/
+# incremental: true;
+paginate: 10
 
+mini_magick:
+    costa-rica-small:
+        source: _images/costa-rica
+        destination: images/small/costa-rica
+        resize: "800x800"
+    costa-rica-large:
+        source: _images/costa-rica
+        destination: images/costa-rica
+        resize: "2000x2000"
+    iceland-small:
+        source: _images/iceland
+        destination: images/small/iceland
+        resize: "800x800"
+    iceland-large:
+        source: _images/iceland
+        destination: images/iceland
+        resize: "2000x2000"
+    india-small:
+        source: _images/india
+        destination: images/small/india
+        resize: "800x800"
+    india-large:
+        source: _images/india
+        destination: images/india
+        resize: "2000x2000"
+    kauai-small:
+        source: _images/kauai
+        destination: images/small/kauai
+        resize: "800x800"
+    kauai-large:
+        source: _images/kauai
+        destination: images/kauai
+        resize: "2000x2000"
+    shenanigans-small:
+        source: _images/shenanigans
+        destination: images/small/shenanigans
+        resize: "800x800"
+    shenanigans-large:
+        source: _images/shenanigans
+        destination: images/shenanigans
+        resize: "2000x2000"
+    singapore-small:
+        source: _images/singapore
+        destination: images/small/singapore
+        resize: "800x800"
+    singapore-large:
+        source: _images/singapore
+        destination: images/singapore
+        resize: "2000x2000"
+    thailand-small:
+        source: _images/thailand
+        destination: images/small/thailand
+        resize: "800x800"
+    thailand-large:
+        source: _images/thailand
+        destination: images/thailand
+        resize: "2000x2000"
+    cover:
+        source: _images/cover
+        destination: images/cover
+
+# this makes each post use the post layout
 defaults:
-  -
+ -
     scope:
       path: ""
     values:
       layout: "post"
 
+# this makes pagination work
 gems:
-  - jekyll-gallery-generator
+  # - jekyll-gallery-generator
+  - jekyll-paginate
 
-gallery:
+
+# gallery:
   # path to the gallery
-  dir: images/
+  # dir: images/
   # title for gallery index
-  title: "Photos"
+  # title: "Photos"
   # title prefix for gallery page. title=title_prefix+gallery_name
-  title_prefix: "Photos: "
+  # title_prefix: "Photos: "
   # field to control sorting of galleries for the index page
   # (possible values are: title, date_time, best_image)
-  sort_field: "date_time"
+  # sort_field: "date_time"
   # sizes for thumbnails
-  thumbnail_size:
-    x: 400
-    y: 400
+  # thumbnail_size:
+    # x: 400
+    # y: 400
   # custom configuration for individual gallery
   # best_image is image for the index page (defaults to last image)
   # galleries:

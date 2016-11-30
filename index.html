@@ -4,10 +4,12 @@ layout: default
 
 <header>
 	<div id="cover">
-		<div>
-			<h1>another cliché travel blog</h1>
-			<h2>a badly kept travel journal</h2>
-		</div>
+		<a href="/">
+			<div>
+				<h1>another cliché travel blog</h1>
+				<h2>a badly kept travel journal</h2>
+			</div>
+		</a>
 	</div>
 	<nav>
 		<ul>
@@ -21,7 +23,7 @@ layout: default
 		</ul>
 	</nav>
 </header>
-{% for post in site.posts %}
+{% for post in paginator.posts %}
 <article>
 	<header class="post-header">
 	<h2>
@@ -36,3 +38,16 @@ layout: default
 	</div>
 </article>
 {% endfor %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% else %}
+    <span class="previous">Previous</span>
+  {% endif %}
+  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% else %}
+    <span class="next ">Next</span>
+  {% endif %}
+</div>

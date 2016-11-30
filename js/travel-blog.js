@@ -25,7 +25,7 @@ function shiftImg() {
 
 
 function openLightbox(figureID) {
-	var imgURL = document.getElementById(figureID).getElementsByTagName('img')[0].src;
+	var imgURL = document.getElementById(figureID).getElementsByTagName('a')[0].href;
 	var imgCaption = document.getElementById(figureID).getElementsByTagName('figcaption')[0].innerHTML;
 	document.getElementById('lightbox').getElementsByTagName('img')[0].src=imgURL;
 	if (0<imgCaption.length){
