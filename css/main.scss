@@ -17,6 +17,7 @@ $primary-text:      #212138;
 $secondary-text:	#767676;
 $background-color:	#FAFAFA;
 $link-color:		#1974d1;
+$disabled-text:		#AAAAAA;
 
 *{
 	margin: 0;
@@ -104,7 +105,7 @@ time{
 	text-decoration: none
 }
 
-.image-figure{	
+.image-figure{
 	padding-bottom: 1.5rem;
 
 	a{
@@ -182,6 +183,15 @@ time{
 	padding: 1.125rem 1rem 0 1rem;
 }
 
+.pagination{
+	display: flex;
+	width: 65%;
+	margin-left: 35%;
+
+	> * {
+		flex-grow: 1;
+	}
+}
 
 /*medium up*/
 @media screen and (min-width: 48rem) {
@@ -213,22 +223,20 @@ time{
 		}
 	}
 
-	.post-header{
-		float: left;
-		clear: left;
-		width: 35%;
-		vertical-align: top;
-		text-align: right;
+	article{
+		display: flex;
+	}
 
+	.post-header{
+		text-align: right;
+		width:35%;
 		h2{
 			max-width: 20rem;
 		}
 	}
 
 	.post{
-		float: left;
-		width: 65%;
-	
+		width:65%;
 		p,blockquote{
 			max-width: 40rem;
 		}
@@ -245,4 +253,9 @@ time{
 		background: #767676 url('/images/cover/bg-large.jpg') center center;
 		background-size: cover;
 	}
+}
+
+
+.disabled{
+	color: $disabled-text;
 }
