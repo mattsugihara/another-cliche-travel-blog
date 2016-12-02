@@ -2,19 +2,52 @@
 layout: default
 ---
 
-<header id="masthead">
-	<div class="content">
-		<h1>another cliché travel blog</h1>
-		<p>a badly kept travel journal</p>
+<header>
+	<div id="cover">
+		<a href="/">
+			<div>
+				<h1>another cliché travel blog</h1>
+				<h2>a badly kept travel journal</h2>
+			</div>
+		</a>
 	</div>
+	<nav>
+		<ul>
+			<li><a href="/cuba/">Cuba</a></li>
+			<li><a href="/kauai/">Kauai</a></li>
+			<li><a href="/iceland/">Iceland and Norway</a></li>
+			<li><a href="/costa-rica/">Costa Rica</a></li>
+			<li><a href="/singapore/">Singapore</a></li>
+			<li><a href="/india/">India</a></li>
+			<li><a href="/thailand/">Thailand</a></li>
+		</ul>
+	</nav>
 </header>
-<div class="content">
-	{% for post in site.posts %}
-	<article>
-		<h2>
-			<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-		</h2>
+{% for post in paginator.posts %}
+<article>
+	<header class="post-header">
+	<h2>
+		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date: "%B %-d, %Y" }}
+	</time>
+	</header>
+	<div class="post">
 		{{ post.content }}
-	</article>
-	{% endfor %}
+	</div>
+</article>
+{% endfor %}
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}">← Newer posts</a>
+  {% else %}
+  	<span class="disabled">← Newer posts</span>
+  {% endif %}
+  	<span>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+   	<a href="{{ paginator.next_page_path }}">Older posts →</a>
+  {% else %}
+   	<span class="disabled">Older posts →</span>
+  {% endif %}
 </div>
