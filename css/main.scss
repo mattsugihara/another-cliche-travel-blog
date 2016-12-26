@@ -11,6 +11,7 @@ $caption-font-family: $base-font-family;
 $base-font-size:	18px;
 $base-font-weight:	400;
 $small-font-size: 	$base-font-size * 0.66666666666666;
+$large-font-size:	2rem;
 $base-line-height:	2rem;
 
 $primary-text:      #212138;
@@ -79,6 +80,10 @@ h2{
 			color: $link-color;
 		}
 	}
+}
+
+blockquote{
+	font-size: $large-font-size;
 }
 
 time{

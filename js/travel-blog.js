@@ -62,14 +62,7 @@ function lightboxListener(figureID) {
 	});
 }
 
-function showNav() {
-	document.querySelector('#main-nav').style.display = "block";
-}
-
-
 document.getElementById('lightbox-shade').addEventListener('click',closeLightbox);
 document.addEventListener('keydown',function(){
 	parseKeyPress(event);
 });
-
-document.querySelector('#show-menu-button').addEventListener('click',showNav);
