@@ -2,6 +2,24 @@
 layout: gallery
 ---
 
+<style>
+#cover{
+	background-image: url('/images/covers/costa-rica-xsmall.jpg');
+}
+
+@media screen and (min-width: 48rem) {
+#cover{
+	background-image: url('/images/covers/costa-rica-small.jpg');
+}	
+}
+
+@media screen and (min-width: 80rem) {
+#cover{
+	background-image: url('/images/covers/costa-rica-medium.jpg');
+}
+}
+</style>
+
 {% for post in site.categories["costa-rica"] reversed %}
 <article>
 	<header class="post-header">

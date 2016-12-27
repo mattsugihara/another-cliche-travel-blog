@@ -2,6 +2,24 @@
 layout: gallery
 ---
 
+<style>
+#cover{
+	background-image: url('/images/covers/thailand-xsmall.jpg');
+}
+
+@media screen and (min-width: 48rem) {
+#cover{
+	background-image: url('/images/covers/thailand-small.jpg');
+}	
+}
+
+@media screen and (min-width: 80rem) {
+#cover{
+	background-image: url('/images/covers/thailand-medium.jpg');
+}
+}
+</style>
+
 {% for post in site.categories["thailand"] reversed %}
 <article>
 	<header class="post-header">

@@ -1,6 +1,23 @@
 ---
 layout: gallery
 ---
+<style>
+#cover{
+	background-image: url('/images/covers/iceland-xsmall.jpg');
+}
+
+@media screen and (min-width: 48rem) {
+#cover{
+	background-image: url('/images/covers/iceland-small.jpg');
+}	
+}
+
+@media screen and (min-width: 80rem) {
+#cover{
+	background-image: url('/images/covers/iceland-medium.jpg');
+}
+}
+</style>
 {% for post in site.categories["iceland"] reversed %}
 <article>
 	<header class="post-header">
