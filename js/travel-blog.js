@@ -54,6 +54,10 @@ function parseKeyPress(event) {
 	}
 }
 
+function toggleNav() {
+	document.querySelector('body').classList.toggle('mobile-nav-shown');
+}
+
 
 function lightboxListener(figureID) {
 	document.getElementById(figureID).getElementsByTagName('a')[0].addEventListener('click',function(){
@@ -66,3 +70,6 @@ document.getElementById('lightbox-shade').addEventListener('click',closeLightbox
 document.addEventListener('keydown',function(){
 	parseKeyPress(event);
 });
+
+document.querySelector('#show-navigation').addEventListener('click',toggleNav);
+document.querySelector('#hide-navigation').addEventListener('click',toggleNav);
