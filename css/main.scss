@@ -164,7 +164,7 @@ body.mobile-nav-shown{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: #767676 url('/images/cover/bg-small.jpg') center center;
+	background: #767676 url('/images/covers/bg-small.jpg') center center;
 	background-size: cover;
 	text-shadow: 0px 0px 10px rgba(0,0,0,.5);
 }
@@ -264,7 +264,7 @@ body.mobile-nav-shown{
 @media screen and (min-width: 48rem) {
 
 	#cover{
-		background: #767676 url('/images/cover/bg-medium.jpg') center center;
+		background: #767676 url('/images/covers/bg-medium.jpg') center center;
 		background-size: cover;
 	}
 
@@ -322,7 +322,7 @@ body.mobile-nav-shown{
 @media screen and (min-width: 80rem) {
 
 	#cover{
-		background: #767676 url('/images/cover/bg-large.jpg') center center;
+		background: #767676 url('/images/covers/bg-large.jpg') center center;
 		background-size: cover;
 	}
 }
