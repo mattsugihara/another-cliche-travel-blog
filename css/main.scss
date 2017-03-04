@@ -6,8 +6,9 @@
 
 
 // variables
-$base-font-family:	"Roboto Slab", sans-serif;
+$base-font-family:	'Quattrocento', serif;
 $caption-font-family: $base-font-family;
+$headline-font-family: 'Quattrocento Sans', sans-serif;
 $base-font-size:	18px;
 $base-font-weight:	300;
 $small-font-size: 	$base-font-size * 0.66666666666666;
@@ -40,6 +41,7 @@ body{
 
 h1{
 	line-height: 2.5rem;
+	font-family: $headline-font-family;
 }
 
 a{
@@ -71,6 +73,7 @@ section{
 h2{
 	line-height: 2rem;
 	display: inline-block;
+	font-family: $headline-font-family;
 
 	a{
 		color: $primary-text;
@@ -249,7 +252,7 @@ body.mobile-nav-shown{
 }
 
 .post{
-	padding: 1.125rem 1rem 0 1rem;
+	padding: 1.25rem 1rem 0 1rem;
 }
 
 .pagination{
