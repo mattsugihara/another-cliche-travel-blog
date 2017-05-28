@@ -32,7 +32,8 @@ function openLightbox(figureID) {
 		document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML+='<figcaption>' + imgCaption + '</figcaption';
 	}
 	
-	document.getElementById('lightbox-shade').style.display='flex';
+	document.getElementById('lightbox-shade').style.display = 'flex';
+	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 
 	document.addEventListener('mousemove', shiftImg);
 }
@@ -42,6 +43,7 @@ function closeLightbox() {
 	document.getElementById('lightbox-shade').style.display='none';
 	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>"
 	document.removeEventListener('mousemove', shiftImg);
+	document.getElementsByTagName('body')[0].style.overflow = 'auto';
 }
 
 
