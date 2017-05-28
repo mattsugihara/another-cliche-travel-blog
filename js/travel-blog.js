@@ -32,7 +32,7 @@ function openLightbox(figureID) {
 		document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML+='<figcaption>' + imgCaption + '</figcaption';
 	}
 	
-	document.getElementById('lightbox-shade').style.display = 'flex';
+	document.getElementById('lightbox').style.display = 'flex';
 	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 
 	document.addEventListener('mousemove', shiftImg);
@@ -40,7 +40,7 @@ function openLightbox(figureID) {
 
 
 function closeLightbox() {
-	document.getElementById('lightbox-shade').style.display='none';
+	document.getElementById('lightbox').style.display='none';
 	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>"
 	document.removeEventListener('mousemove', shiftImg);
 	document.getElementsByTagName('body')[0].style.overflow = 'auto';
@@ -68,7 +68,7 @@ function lightboxListener(figureID) {
 	});
 }
 
-document.getElementById('lightbox-shade').addEventListener('click',closeLightbox);
+document.getElementById('lightbox').addEventListener('click',closeLightbox);
 document.addEventListener('keydown',function(){
 	parseKeyPress(event);
 });
