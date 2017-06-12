@@ -6,9 +6,9 @@
 
 
 // variables
-$base-font-family:	Cardo, Garamond, serif;
+$base-font-family:	Fenix, Garamond, serif;
 $caption-font-family: $base-font-family;
-$headline-font-family: Montserrat, sans-serif;
+$headline-font-family: Asap, sans-serif;
 $base-font-size:	1.25rem;
 $small-font-size: 	0.875rem;
 $large-font-size:	2rem;
@@ -107,6 +107,7 @@ nav{
 		left: 0;
 		right: 0;
 		display: none;
+		font-family: asap;
 	}
 
 	a{
@@ -129,6 +130,10 @@ nav{
 			text-decoration: underline;
 		}
 	}
+}
+
+article{
+	padding:1rem;
 }
 
 #show-navigation{
@@ -231,14 +236,6 @@ body.mobile-nav-shown{
 	}
 }
 
-.post-header{
-	padding: 1rem 1rem 0 1rem;
-}
-
-.post{
-	padding: 1.25rem 1rem 0 1rem;
-}
-
 .pagination{
 	display: flex;
 
@@ -277,13 +274,19 @@ body.mobile-nav-shown{
 		}
 	}
 
+	#all-trips{
+		display: none;
+	}
+
 	article{
 		display: flex;
 	}
 
 	.post-header{
 		text-align: right;
+		padding-right: 1rem;
 		width:35%;
+		margin-top: -0.3125rem;
 		h2{
 			max-width: 20rem;
 		}
