@@ -1,0 +1,37 @@
+---
+layout: gallery
+---
+
+<style>
+#cover{
+	background-image: url('/images/covers/banff-xsmall.jpg');
+}
+
+@media screen and (min-width: 48rem) {
+#cover{
+	background-image: url('/images/covers/banff-small.jpg');
+}	
+}
+
+@media screen and (min-width: 80rem) {
+#cover{
+	background-image: url('/images/covers/banff-medium.jpg');
+}
+}
+</style>
+
+{% for post in site.categories["banff"] reversed %}
+<article>
+	<header class="post-header">
+	<h2>
+		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date: "%B %-d, %Y" }}
+	</time>
+	</header>
+	<div class="post">
+		{{ post.content }}
+	</div>
+</article>
+{% endfor %}
