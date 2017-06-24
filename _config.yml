@@ -18,6 +18,14 @@ mini_magick:
         source: _unprocessed_images/costa-rica
         destination: images/costa-rica
         resize: "2000x2000"
+    cuba-small:
+        source: _unprocessed_images/cuba
+        destination: images/small/cuba
+        resize: "800x800"
+    cuba-large:
+        source: _unprocessed_images/cuba
+        destination: images/cuba
+        resize: "2000x2000"
     iceland-small:
         source: _unprocessed_images/iceland
         destination: images/small/iceland
@@ -85,5 +93,4 @@ defaults:
 
 # this makes pagination work
 gems:
-  # - jekyll-gallery-generator
   - jekyll-paginate
