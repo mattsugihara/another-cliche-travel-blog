@@ -6,9 +6,9 @@
 
 
 // variables
-$base-font-family:  Fenix, Garamond, serif;
+$base-font-family:  Baskerville, Garamond, serif;
 $caption-font-family: $base-font-family;
-$headline-font-family: Asap, sans-serif;
+$headline-font-family: "Open Sans", sans-serif;
 $base-font-size:  1.25rem;
 $small-font-size:   0.875rem;
 $large-font-size: 2rem;
@@ -303,10 +303,6 @@ body.mobile-nav-shown{
     button{
       display: none;
     }
-  }
-
-  #all-trips{
-    display: none;
   }
 
   article{
