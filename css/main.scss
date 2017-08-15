@@ -91,10 +91,13 @@ time{
   display: block;
   font-variant: small-caps;
   color: $secondary-text;
-  font-size: $small-font-size;
+  /*font-size: $small-font-size;*/
 }
 
 nav{
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
 
   ul{
     list-style: none;
@@ -135,7 +138,7 @@ nav{
     font-family: $base-font-family;
 
     &:hover{
-      text-decoration: underline;
+      text-decoration: none;
     }
   }
 }
@@ -145,8 +148,17 @@ article{
 }
 
 #show-navigation{
-  width: 100%;
+  padding:1rem 2rem;
+  border: 3px solid $primary-text;
+  transition: all .3s ease;
+  font-variant: small-caps;
+
+  &:hover{
+    background: $primary-text;
+    color: white;
+  }
 }
+
 #hide-navigation{
   display: none;
   background: transparent;
@@ -276,8 +288,7 @@ body.mobile-nav-shown{
       position: relative;
       list-style: none;
       display: flex;
-      justify-content: space-around;
-      background: rgba(250,250,250,.8);
+      background: inherit;
     }
 
     li{
