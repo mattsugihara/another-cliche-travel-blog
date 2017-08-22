@@ -5,11 +5,11 @@
 
 
 
-// variables
-$base-font-family:  Baskerville, Garamond, serif;
+/* variables */
+$base-font-family:  Merriweather,Baskerville, Garamond, serif;
 $caption-font-family: $base-font-family;
-$headline-font-family: "Open Sans", sans-serif;
-$base-font-size:  1.25rem;
+$headline-font-family: Oswold, sans-serif;
+$base-font-size:  1rem;
 $small-font-size:   0.875rem;
 $large-font-size: 2rem;
 $base-line-height:  2rem;
@@ -69,7 +69,8 @@ section{
 }
 
 h2{
-  line-height: 2rem;
+  line-height: 3rem;
+  font-size: 40px;
   display: inline-block;
   font-family: $headline-font-family;
 
@@ -335,7 +336,7 @@ article{
     text-align: right;
     padding-right: 1rem;
     width:35%;
-    margin-top: -0.3125rem;
+    margin-top: -1rem;
     h2{
       max-width: 20rem;
     }
