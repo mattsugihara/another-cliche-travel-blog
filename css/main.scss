@@ -91,43 +91,38 @@ time{
   display: block;
   font-variant: small-caps;
   color: $secondary-text;
-  /*font-size: $small-font-size;*/
 }
 
 nav{
   display: flex;
-  justify-content: center;
-  padding: 1rem;
 
   ul{
     list-style: none;
-    background: rgba(0,0,0,.9);
     margin: 0;
     padding: 0;
     position: fixed;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
-    right: 0;
+    background: rgba(0,0,0,.95);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;    /* webkit inertial scrolling */
     display: none;
-    flex-wrap: wrap;
-    font-family: asap;
-  }
-
-  li{
-    flex-grow: 1;
-    flex-basis: 33.3333333%;
   }
 
   a{
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center; 
-    height: 100%; 
+    color: rgba(240,240,240,1);
+    display: block;
+    font-size: 3rem;
+    line-height: 3rem;
+    padding: 1rem;
+
+    &:hover{
+      text-decoration: none;
+      color: white;
+    }
   }
-
-
 
   button{
     border: 0;
@@ -148,14 +143,22 @@ article{
 }
 
 #show-navigation{
-  padding:1rem 2rem;
-  border: 3px solid $primary-text;
-  transition: all .3s ease;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
   font-variant: small-caps;
 
-  &:hover{
+  .plane-icon{
+    border-radius: 50%;
     background: $primary-text;
     color: white;
+    height: 3rem;
+    width: 3rem;
+    padding-top:.875rem;
+    display: table-cell !important;
+    vertical-align: middle;
+    text-align: center;
+    margin-right: 1rem;
   }
 }
 
@@ -166,7 +169,8 @@ article{
 
 .mobile-nav-shown{
   ul{
-    display: flex;
+    display: block;
+
   }
 
   #hide-navigation{
@@ -177,7 +181,7 @@ article{
   }
 }
 
-body.mobile-nav-shown{
+.mobile-nav-shown{
   overflow: hidden;
 
 }
@@ -193,6 +197,12 @@ body.mobile-nav-shown{
   background: #767676 url('/images/covers/bg-small.jpg') center center;
   background-size: cover;
   text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+  justify-content: flex-end;
+  align-items: flex-end;
+
+  div{
+      margin-bottom: 2rem;
+  }
 }
 
 #cover a{
@@ -283,12 +293,19 @@ body.mobile-nav-shown{
     }
   }
 
+#show-navigation{
+  display: none;
+}
+
   nav{
+    justify-content: center;
     ul{
       position: relative;
       list-style: none;
       display: flex;
       background: inherit;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     li{
@@ -298,6 +315,11 @@ body.mobile-nav-shown{
     a{
       color: inherit;
       padding:1rem;
+      font-size: $base-font-size;
+
+      &:hover{
+        color: $link-color;
+      }
     }
 
     button{
