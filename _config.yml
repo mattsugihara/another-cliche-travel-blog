@@ -90,7 +90,7 @@ defaults:
       path: ""
     values:
       layout: "post"
-
-# this makes pagination work
-gems:
+# maybe not, remove if this compiles
+# # this makes pagination work
+plugins:
   - jekyll-paginate
