@@ -6,27 +6,26 @@ for (var i = allImages.length - 1; i >= 0; i--) {
 }
 
 
-function shiftImg() {
-	var img = document.querySelector('#lightbox').querySelector('img');
-	var cursorX = event.clientX;
-	var cursorY = event.clientY;
-	var windowWidth = document.documentElement.clientWidth;
-	var windowHeight = document.documentElement.clientHeight;
-	var imageWidth = img.offsetWidth;
-	var imageHeight = img.offsetHeight;
+function shiftImg(e) {
+	let img = document.querySelector('#lightbox').querySelector('img');
+	let cursorX = e.clientX;
+	let cursorY = e.clientY;
+	let windowWidth = document.documentElement.clientWidth;
+	let windowHeight = document.documentElement.clientHeight;
+	let imageWidth = img.offsetWidth;
+	let imageHeight = img.offsetHeight;
 
-	var relativeLeft = (imageWidth - windowWidth) * (cursorX / windowWidth);
-	var relativeTop = (imageHeight - windowHeight) * (cursorY / windowHeight);
+	let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + 'px';
+	let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + 'px';
 
-	img.style.left = -relativeLeft + 'px';
-	img.style.top = -relativeTop + 'px';
+	img.setAttribute('style','transform: translate3d(' + left + ',' + top +',0px)');	
 }
 
 
 
 function openLightbox(figureID) {
-	var imgURL = document.getElementById(figureID).getElementsByTagName('a')[0].href;
-	var imgCaption = document.getElementById(figureID).getElementsByTagName('figcaption')[0].innerHTML;
+	let imgURL = document.getElementById(figureID).getElementsByTagName('a')[0].href;
+	let imgCaption = document.getElementById(figureID).getElementsByTagName('figcaption')[0].innerHTML;
 	document.getElementById('lightbox').getElementsByTagName('img')[0].src=imgURL;
 	if (0<imgCaption.length){
 		document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML+='<figcaption>' + imgCaption + '</figcaption';
@@ -35,7 +34,7 @@ function openLightbox(figureID) {
 	document.getElementById('lightbox').style.display = 'flex';
 	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
 
-	document.addEventListener('mousemove', shiftImg);
+	document.addEventListener('mousemove',shiftImg);
 }
 
 
