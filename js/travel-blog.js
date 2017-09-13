@@ -6,21 +6,21 @@ for (var i = allImages.length - 1; i >= 0; i--) {
 }
 
 
-function shiftImg(e) {
-	let img = document.querySelector('#lightbox').querySelector('img');
-	let cursorX = e.clientX;
-	let cursorY = e.clientY;
-	let windowWidth = document.documentElement.clientWidth;
-	let windowHeight = document.documentElement.clientHeight;
-	let imageWidth = img.offsetWidth;
-	let imageHeight = img.offsetHeight;
+function shiftImg(event) {
+	window.requestAnimationFrame(function() {
+		const img = document.querySelector('#lightbox').querySelector('img');
+		let cursorX = event.clientX;
+		let cursorY = event.clientY;
+		let windowWidth = document.documentElement.clientWidth;
+		let windowHeight = document.documentElement.clientHeight;
+		let imageWidth = img.offsetWidth;
+		let imageHeight = img.offsetHeight;
 
-	let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + 'px';
-	let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + 'px';
-
-	img.setAttribute('style','transform: translate3d(' + left + ',' + top +',0px)');	
+		let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + 'px';
+		let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + 'px';
+		img.setAttribute('style','transform: translate3d(' + left + ',' + top +',0px)');
+	});
 }
-
 
 
 function openLightbox(figureID) {
@@ -31,16 +31,17 @@ function openLightbox(figureID) {
 		document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML+='<figcaption>' + imgCaption + '</figcaption';
 	}
 	
-	document.getElementById('lightbox').style.display = 'flex';
+	document.getElementById('lightbox').classList.add('visible');
 	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+	shiftImg(event);
 
-	document.addEventListener('mousemove',shiftImg);
+	document.addEventListener('mousemove',function(){ shiftImg(event) });
 }
 
 
 function closeLightbox() {
-	document.getElementById('lightbox').style.display='none';
-	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>"
+	document.getElementById('lightbox').classList.remove('visible');
+	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>";
 	document.removeEventListener('mousemove', shiftImg);
 	document.getElementsByTagName('body')[0].style.overflow = 'auto';
 }

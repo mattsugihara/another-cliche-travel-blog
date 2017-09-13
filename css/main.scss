@@ -236,17 +236,18 @@ article{
 #lightbox{
   cursor: zoom-out;
   overflow: hidden;
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease;
 
-  img{
-    position: absolute;
-    top: 0;
-    left: 0;
+  &.visible{
+    pointer-events: all;
+    opacity: 1;
   }
 
   figcaption{
