@@ -10,13 +10,14 @@ if ("ontouchstart" in document.documentElement) {
 }
 
 function panImage(event) {
-		const img = document.querySelector('#lightbox img');
-		let cursorX = event.clientX;
-		let cursorY = event.clientY;
-		let windowWidth = document.documentElement.clientWidth;
-		let windowHeight = document.documentElement.clientHeight;
-		let imageWidth = img.offsetWidth;	//There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
-		let imageHeight = img.offsetHeight;
+	const img = document.querySelector('#lightbox img');
+	let cursorX = event.clientX;
+	let cursorY = event.clientY;
+	let windowWidth = document.documentElement.clientWidth;
+	let windowHeight = document.documentElement.clientHeight;
+	let imageWidth = img.offsetWidth;	//There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
+	let imageHeight = img.offsetHeight;
+	
 	window.requestAnimationFrame(function() {
 		let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + 'px';
 		let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + 'px';
@@ -24,20 +25,30 @@ function panImage(event) {
 	});
 }
 
+function setImage(figureID) {
+	const image = document.querySelector('#lightbox img');
+	let imageBuffer = new Image();
+	
+	imageBuffer.onload = function(){
+	    image.src = this.src;
+	};
+	imageBuffer.src = document.querySelector('#' + figureID + ' a').href;
+}
 
 function openLightbox(figureID) {
-	let imgURL = document.querySelector('#' + figureID + ' a').href;
-	let imgCaption = document.querySelector('#' + figureID + ' figcaption').innerHTML;
-	document.querySelector('#lightbox img').setAttribute('src', imgURL);
+	let imgCaption = document.querySelector('#' + figureID + ' figcaption').innerText;
+
 	if (0 < imgCaption.length){
 		document.querySelector('#lightbox figure').innerHTML += '<figcaption>' + imgCaption + '</figcaption';
 	}
+
+	setImage(figureID);
+	panImage(event);
 	
 	document.querySelector('#lightbox').classList.add('visible');
 	document.querySelector('body').setAttribute('style','overflow: hidden');
 
 	if(!document.querySelector('body').classList.contains('supports-touch')){
-		panImage(event);
 		document.addEventListener('mousemove',function(){ panImage(event) });
 	}
 }
