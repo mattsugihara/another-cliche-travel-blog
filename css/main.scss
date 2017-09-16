@@ -233,14 +233,20 @@ article{
   }
 }
 
-#lightbox{
+.supports-hover #lightbox{
+  overflow: hidden !important;
   cursor: zoom-out;
-  overflow: hidden;
+}
+
+#lightbox{
+  -webkit-overflow-scrolling: touch;
+  overflow: auto;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  display: block;
   pointer-events: none;
   opacity: 0;
   transition: opacity .25s ease;
@@ -249,10 +255,11 @@ article{
   &.visible{
     pointer-events: all;
     opacity: 1;
+    background: rgba(0,0,0,.9);
   }
 
   figcaption{
-    position: absolute;
+    position: fixed;
     background: rgba(255,255,255,.95);
     bottom: 0;
     right: 0;
@@ -337,6 +344,7 @@ article{
     padding-right: 1rem;
     width:35%;
     margin-top: -.125rem;
+    
     h2{
       max-width: 20rem;
     }
@@ -354,7 +362,7 @@ article{
   }
 
   .pagination{
-    margin-left: 35%;
+    margin: 0 0 2rem 35%;
     width: 65%;
   }
 }

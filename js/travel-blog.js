@@ -5,9 +5,11 @@ for (var i = allImages.length - 1; i >= 0; i--) {
 	lightboxListener('figure-number-' + i);
 }
 
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector('body').classList.remove('supports-hover');
+}
 
-function shiftImg(event) {
-	window.requestAnimationFrame(function() {
+function panImage(event) {
 		const img = document.querySelector('#lightbox img');
 		let cursorX = event.clientX;
 		let cursorY = event.clientY;
@@ -15,7 +17,7 @@ function shiftImg(event) {
 		let windowHeight = document.documentElement.clientHeight;
 		let imageWidth = img.offsetWidth;	//There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
 		let imageHeight = img.offsetHeight;
-
+	window.requestAnimationFrame(function() {
 		let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + 'px';
 		let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + 'px';
 		img.setAttribute('style','transform: translate(' + left + ',' + top +')');
@@ -33,17 +35,19 @@ function openLightbox(figureID) {
 	
 	document.querySelector('#lightbox').classList.add('visible');
 	document.querySelector('body').setAttribute('style','overflow: hidden');
-	shiftImg(event);
 
-	document.addEventListener('mousemove',function(){ shiftImg(event) });
+	if(document.querySelector('body').classList.contains('supports-hover')){
+		panImage(event);
+		document.addEventListener('mousemove',function(){ panImage(event) });
+	}
 }
 
 
 function closeLightbox() {
 	document.querySelector('#lightbox').classList.remove('visible');
 	document.querySelector('#lightbox figure').innerHTML = "<img>";
-	document.removeEventListener('mousemove', shiftImg);
-	document.querySelector('body').setAttribute('style','overflow: auto');
+	document.removeEventListener('mousemove', panImage);
+	document.querySelector('body').removeAttribute('style');
 }
 
 
