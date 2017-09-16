@@ -244,6 +244,7 @@ article{
   pointer-events: none;
   opacity: 0;
   transition: opacity .25s ease;
+  will-change: transform, opacity;
 
   &.visible{
     pointer-events: all;

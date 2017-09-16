@@ -13,12 +13,12 @@ function shiftImg(event) {
 		let cursorY = event.clientY;
 		let windowWidth = document.documentElement.clientWidth;
 		let windowHeight = document.documentElement.clientHeight;
-		let imageWidth = img.offsetWidth;
+		let imageWidth = img.offsetWidth;	//There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
 		let imageHeight = img.offsetHeight;
 
 		let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + 'px';
 		let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + 'px';
-		img.setAttribute('style','transform: translate3d(' + left + ',' + top +',0px)');
+		img.setAttribute('style','transform: translate(' + left + ',' + top +')');
 	});
 }
 
