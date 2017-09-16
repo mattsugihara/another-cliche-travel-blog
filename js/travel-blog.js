@@ -8,7 +8,7 @@ for (var i = allImages.length - 1; i >= 0; i--) {
 
 function shiftImg(event) {
 	window.requestAnimationFrame(function() {
-		const img = document.querySelector('#lightbox').querySelector('img');
+		const img = document.querySelector('#lightbox img');
 		let cursorX = event.clientX;
 		let cursorY = event.clientY;
 		let windowWidth = document.documentElement.clientWidth;
@@ -24,15 +24,15 @@ function shiftImg(event) {
 
 
 function openLightbox(figureID) {
-	let imgURL = document.getElementById(figureID).getElementsByTagName('a')[0].href;
-	let imgCaption = document.getElementById(figureID).getElementsByTagName('figcaption')[0].innerHTML;
-	document.getElementById('lightbox').getElementsByTagName('img')[0].src=imgURL;
-	if (0<imgCaption.length){
-		document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML+='<figcaption>' + imgCaption + '</figcaption';
+	let imgURL = document.querySelector('#' + figureID + ' a').href;
+	let imgCaption = document.querySelector('#' + figureID + ' figcaption').innerHTML;
+	document.querySelector('#lightbox img').setAttribute('src', imgURL);
+	if (0 < imgCaption.length){
+		document.querySelector('#lightbox figure').innerHTML += '<figcaption>' + imgCaption + '</figcaption';
 	}
 	
-	document.getElementById('lightbox').classList.add('visible');
-	document.getElementsByTagName('body')[0].style.overflow = 'hidden';
+	document.querySelector('#lightbox').classList.add('visible');
+	document.querySelector('body').setAttribute('style','overflow: hidden');
 	shiftImg(event);
 
 	document.addEventListener('mousemove',function(){ shiftImg(event) });
@@ -40,10 +40,10 @@ function openLightbox(figureID) {
 
 
 function closeLightbox() {
-	document.getElementById('lightbox').classList.remove('visible');
-	document.getElementById('lightbox').getElementsByTagName('figure')[0].innerHTML="<img>";
+	document.querySelector('#lightbox').classList.remove('visible');
+	document.querySelector('#lightbox figure').innerHTML = "<img>";
 	document.removeEventListener('mousemove', shiftImg);
-	document.getElementsByTagName('body')[0].style.overflow = 'auto';
+	document.querySelector('body').setAttribute('style','overflow: auto');
 }
 
 
@@ -62,13 +62,13 @@ function toggleNav() {
 
 
 function lightboxListener(figureID) {
-	document.getElementById(figureID).getElementsByTagName('a')[0].addEventListener('click',function(){
+	document.querySelector('#' + figureID + ' a').addEventListener('click',function() {
 		event.preventDefault();
 		openLightbox(figureID);
 	});
 }
 
-document.getElementById('lightbox').addEventListener('click',closeLightbox);
+document.querySelector('#lightbox').addEventListener('click',closeLightbox);
 document.addEventListener('keydown',function(){
 	parseKeyPress(event);
 });
