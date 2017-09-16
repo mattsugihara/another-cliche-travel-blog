@@ -6,7 +6,7 @@ for (var i = allImages.length - 1; i >= 0; i--) {
 }
 
 if ("ontouchstart" in document.documentElement) {
-    document.querySelector('body').classList.remove('supports-hover');
+    document.querySelector('body').classList.add('supports-touch');
 }
 
 function panImage(event) {
@@ -36,7 +36,7 @@ function openLightbox(figureID) {
 	document.querySelector('#lightbox').classList.add('visible');
 	document.querySelector('body').setAttribute('style','overflow: hidden');
 
-	if(document.querySelector('body').classList.contains('supports-hover')){
+	if(!document.querySelector('body').classList.contains('supports-touch')){
 		panImage(event);
 		document.addEventListener('mousemove',function(){ panImage(event) });
 	}
