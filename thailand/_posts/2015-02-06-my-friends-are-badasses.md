@@ -3,9 +3,9 @@ title: "My Friends are Unmitigated Badasses"
 pubdate: "2015-02-25 21:54:08"
 ---
 
-Waiting for breakfast just before going mountain biking, it occured to me to text Mark (an avid mountain biker) to say "Hey, I'm doing your sport!" like I do just about every time I'm about to try something new. Then I thought, wait, what *don't* my friends do? What could I do that they don't already? Stuff that got crossed off the list quickly:
+Waiting for breakfast just before going mountain biking, it occurred to me to text Mark (an avid mountain biker) to say "Hey, I'm doing your sport!" like I do just about every time I'm about to try something new. Then I thought, wait, what *don't* my friends do? What could I do that they don't already? Stuff that got crossed off the list quickly:
 
- - Anything white whater
+ - Anything white water
  - Biking (of all kinds)
  - Climbing
  - Horseback riding
