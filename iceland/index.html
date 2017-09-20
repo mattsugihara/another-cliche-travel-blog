@@ -1,15 +1,10 @@
 ---
 layout: feed
+image: "/images/covers/iceland-medium.jpg"
 ---
 <style>
 #cover{
-	background-image: url('/images/covers/iceland-small.jpg');
-}
-
-@media screen and (min-width: 80rem) {
-#cover{
-	background-image: url('/images/covers/iceland-medium.jpg');
-}
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wBDAAEBAQEBAQIBAQIDAgICAwQDAwMDBAUEBAQEBAUGBQUFBQUFBgYGBgYGBgYHBwcHBwcICAgICAkJCQkJCQkJCQn/2wBDAQEBAQICAgQCAgQJBgUGCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/wAARCAAVACgDASIAAhEBAxEB/8QAHAABAAEEAwAAAAAAAAAAAAAAAAoEBggLAgcJ/8QALhAAAQIEBAUEAAcAAAAAAAAAAQIDAAQFEQYHEiEIEzFBUQkicYEVIzJDUpGx/8QAGAEAAwEBAAAAAAAAAAAAAAAABAUGAQP/xAAqEQABAwIDBQkAAAAAAAAAAAABAAIDBBEFBiEHEjFBkSIyUWJxgsHh8P/aAAwDAQACEQMRAD8A9D8K8UcsCjXWRbxMJI/yMncHcX2F02p9UcluUs2U4VCx+vEQOKLxX5h4cp7dHp9aqrjVyoapgvBJ221KSVb9t7RX1HjXzpkmW+ZWZyWbcuUrU8gHb4F4yXaLg8zrNDwT5R8FADCayMalp930p/dbzjyErczLmluSyHm7XdZUkHrvsIyhw/nfkjJMsVAzjKn7Aa1KSlI83N7xrV5Hjtz8amUN0nEE4hRIBLr3tBPS+q39HrHbeHPVf4naPUWKg9WpRIlTykh+QYdl1FJ/dQEjc/yIPzD2ozA8UwlIk3RyI16XJshIMPa6Ujdbc/vBbK6gZ2YIrc6Pw+sSK0HoguG4t2ACTCICOFPXa9QKgpRNYYbwmtpI9i00WVcT93IN/uERD9o9OT2SU/jy2+3AFR838bT8/PCj0xpEohNk6z+YrcX2uAkeNkxQvkt1ESbZJcuAp5Z1uHtsT+kfEIRXZawalp6dr4WAE2159eKVVUznu3XHRXFKsct9otHShtak6fKgm+onv1i3KTUFOVZ2QeSFtPEpUk9N4Qh3ONVyj7q5tVWqYTrgbpDxSlSgkA721HT928QhCJDEsvUM0pfLECfRMmVDwLAr/9k=);
 }
 </style>
 {% for post in site.categories["iceland"] reversed %}

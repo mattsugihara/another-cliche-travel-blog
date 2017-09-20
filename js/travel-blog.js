@@ -9,6 +9,16 @@ if ("ontouchstart" in document.documentElement) {
     document.querySelector('body').classList.add('supports-touch');
 }
 
+var coverImage = new Image();
+
+coverImage.onload = function(){
+	document.querySelector('#cover').setAttribute('style','background-image: url(' + coverImage.src + ');')
+};
+
+coverImage.src = document.querySelector('#cover').getAttribute('data-image');
+
+
+
 function panImage(event) {
 	const img = document.querySelector('#lightbox img');
 	let cursorX = event.clientX;
@@ -25,7 +35,8 @@ function panImage(event) {
 	});
 }
 
-function setImage(figureID) {
+
+function getImage(figureID) {
 	const image = document.querySelector('#lightbox img');
 	let imageBuffer = new Image();
 	
@@ -35,14 +46,16 @@ function setImage(figureID) {
 	imageBuffer.src = document.querySelector('#' + figureID + ' a').href;
 }
 
+
 function openLightbox(figureID) {
 	let imgCaption = document.querySelector('#' + figureID + ' figcaption').innerText;
 
 	if (0 < imgCaption.length){
-		document.querySelector('#lightbox figure').innerHTML += '<figcaption>' + imgCaption + '</figcaption';
+		document.querySelector('#lightbox figure').innerHTML +=
+			'<figcaption>' + imgCaption + '</figcaption';
 	}
 
-	setImage(figureID);
+	getImage(figureID);
 	panImage(event);
 	
 	document.querySelector('#lightbox').classList.add('visible');
@@ -62,7 +75,6 @@ function closeLightbox() {
 }
 
 
-
 function parseKeyPress(event) {
 	switch (event.keyCode) {
 	    case 27:
@@ -70,6 +82,7 @@ function parseKeyPress(event) {
 	        break;
 	}
 }
+
 
 function toggleNav() {
 	document.querySelector('body').classList.toggle('mobile-nav-shown');
@@ -83,10 +96,10 @@ function lightboxListener(figureID) {
 	});
 }
 
+
+document.querySelector('#show-navigation').addEventListener('click',toggleNav);
+document.querySelector('#hide-navigation').addEventListener('click',toggleNav);
 document.querySelector('#lightbox').addEventListener('click',closeLightbox);
 document.addEventListener('keydown',function(){
 	parseKeyPress(event);
 });
-
-document.querySelector('#show-navigation').addEventListener('click',toggleNav);
-document.querySelector('#hide-navigation').addEventListener('click',toggleNav);
