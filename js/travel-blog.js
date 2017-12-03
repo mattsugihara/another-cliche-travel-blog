@@ -26,6 +26,8 @@ function panImage(event) {
 	let windowWidth = document.documentElement.clientWidth;
 	let windowHeight = document.documentElement.clientHeight;
 	let imageWidth = img.offsetWidth;	//There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
+	console.log('imageWidth: '+ imageWidth);
+	console.log('img.width: '+ img.width);
 	let imageHeight = img.offsetHeight;
 	
 	window.requestAnimationFrame(function() {
@@ -56,7 +58,6 @@ function openLightbox(figureID) {
 	}
 
 	getImage(figureID);
-	panImage(event);
 	
 	document.querySelector('#lightbox').classList.add('visible');
 	document.querySelector('body').setAttribute('style','overflow: hidden');
@@ -70,7 +71,7 @@ function openLightbox(figureID) {
 function closeLightbox() {
 	document.querySelector('#lightbox').classList.remove('visible');
 	document.querySelector('#lightbox figure').innerHTML = "<img>";
-	document.removeEventListener('mousemove', panImage);
+	document.removeEventListener('mousemove',function(){ panImage(event) })
 	document.querySelector('body').removeAttribute('style');
 }
 
