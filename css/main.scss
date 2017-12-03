@@ -7,7 +7,7 @@
 /* variables */
 $base-font-family:  Merriweather,Baskerville, Garamond, serif;
 $caption-font-family: $base-font-family;
-$headline-font-family: Oswold, sans-serif;
+$headline-font-family: Oswald, sans-serif;
 $base-font-size:  1rem;
 $small-font-size:   0.875rem;
 $large-font-size: 2rem;
@@ -91,48 +91,16 @@ time{
   color: $secondary-text;
 }
 
-nav{
-  display: flex;
+button{
+  border: 0;
+  border-radius: 0;
+  background: $background-color;
+  cursor: pointer;
+  font-size: $base-font-size;
+  font-family: $base-font-family;
 
-  ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0,0,0,.95);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;    /* webkit inertial scrolling */
-    display: none;
-  }
-
-  a{
-    color: rgba(240,240,240,1);
-    display: block;
-    font-size: 3rem;
-    line-height: 3rem;
-    padding: 1rem;
-
-    &:hover{
-      text-decoration: none;
-      color: white;
-    }
-  }
-
-  button{
-    border: 0;
-    border-radius: 0;
-    background: $background-color;
-    cursor: pointer;
-    font-size: $base-font-size;
-    font-family: $base-font-family;
-
-    &:hover{
-      text-decoration: none;
-    }
+  &:hover{
+    text-decoration: none;
   }
 }
 
@@ -145,17 +113,13 @@ article{
   display: flex;
   align-items: center;
   font-variant: small-caps;
+  border-radius: 2rem;
+  background: $primary-text;
+  margin: 1rem;
+  color: white;
+  font-family: $headline-font-family;
 
-  .plane-icon{
-    border-radius: 50%;
-    background: $primary-text;
-    color: white;
-    height: 3rem;
-    width: 3rem;
-    padding-top: .875rem;
-    display: table-cell !important;
-    vertical-align: middle;
-    text-align: center;
+  svg{
     margin-right: 1rem;
   }
 }
@@ -166,22 +130,20 @@ article{
 }
 
 .mobile-nav-shown{
+  overflow: hidden;
+
   ul{
-    display: block;
+    display: flex;
 
   }
 
   #hide-navigation{
     display: block;
     position: fixed;
-    right: 0;
-    top: 0;
+    left: 50%;
+    bottom: 1rem;
+    margin-left: -1.5rem;
   }
-}
-
-.mobile-nav-shown{
-  overflow: hidden;
-
 }
 
 .post-content{
@@ -199,7 +161,7 @@ article{
   align-items: flex-end;
 
   div{
-      margin-bottom: 2rem;
+    margin-bottom: 2rem;
   }
 }
 
@@ -278,6 +240,97 @@ article{
   }
 }
 
+@media screen and (max-width: 48rem){
+  nav{
+    display: flex;
+
+    li:last-child{
+      padding-right: 1rem;
+    }
+
+    ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,.9);
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;    /* webkit inertial scrolling */
+      display: none;
+    }
+
+    a{
+      width: 75vw;
+      max-width: 20rem;
+      height: 80vh;
+      margin: 1rem 0 0 1rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $background-color;
+      text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+      font-family: $headline-font-family;
+      text-transform: uppercase;
+      font-size: $large-font-size;
+      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+
+      &:hover{
+        text-decoration: none;
+      }
+    }
+  }
+
+  #nav{
+    &-banff{
+      background: #767676 url('/images/covers/banff-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-kauai-2{
+      background: #767676 url('/images/covers/kauai-2-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-cuba{
+      background: #767676 url('/images/covers/cuba-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-kauai{
+      background: #767676 url('/images/covers/kauai-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-iceland{
+      background: #767676 url('/images/covers/iceland-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-costa-rica{
+      background: #767676 url('/images/covers/costa-rica-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-singapore{
+      background: #767676 url('/images/covers/singapore-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-india{
+      background: #767676 url('/images/covers/india-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-thailand{
+      background: #767676 url('/images/covers/thailand-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    &-all{
+      background: #767676 url('/images/covers/bg-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
+  }
+}
+
 /*medium up*/
 @media screen and (min-width: 48rem) {
 
@@ -300,9 +353,9 @@ article{
     }
   }
 
-#show-navigation{
-  display: none;
-}
+  #show-navigation{
+    display: none;
+  }
 
   nav{
     justify-content: center;
