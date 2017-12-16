@@ -1,0 +1,26 @@
+---
+layout: feed
+image: "/images/covers/taiwan-medium.jpg"
+---
+
+<style>
+	#cover{
+	background-image: url();
+	}
+</style>
+
+{% for post in site.categories["taiwan"] reversed %}
+<article>
+	<header class="post-header">
+	<h2>
+		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date: "%B %-d, %Y" }}
+	</time>
+	</header>
+	<div class="post">
+		{{ post.content }}
+	</div>
+</article>
+{% endfor %}
