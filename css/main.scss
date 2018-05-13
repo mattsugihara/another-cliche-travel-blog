@@ -5,13 +5,13 @@
 
 
 /* variables */
-$base-font-family:  Merriweather,Baskerville, Garamond, serif;
-$caption-font-family: $base-font-family;
-$headline-font-family: Oswald, sans-serif;
+$base-font-family:  "Open sans", sans-serif;
 $base-font-size:  1rem;
+$base-line-height:  2rem;
+
+$secondary-font-family: "Inconsolata", mono;
 $small-font-size:   0.875rem;
 $large-font-size: 2rem;
-$base-line-height:  2rem;
 
 $primary-text:      #402121;
 $secondary-text:  #767676;
@@ -36,23 +36,11 @@ body{
   word-wrap: break-word;
 }
 
-h1{
-  line-height: 2.5rem;
-  font-family: $headline-font-family;
-}
-
 a{
   text-decoration: none;
   color: $link-color;
 }
 
-b, strong{
-  font-weight: 600;
-}
-
-a:hover{
-  text-decoration: underline;
-}
 
 p{
   padding-bottom: 1rem;
@@ -63,33 +51,6 @@ ol,ul{
   padding-bottom: 1rem;
 }
 
-section{
-  margin-bottom: 10rem;
-}
-
-h2{
-  display: inline-block;
-  font-family: $headline-font-family;
-
-  a{
-    color: $primary-text;
-
-    &:hover{
-      text-decoration: none;
-      color: $link-color;
-    }
-  }
-}
-
-blockquote{
-  font-size: $large-font-size;
-}
-
-time{
-  display: block;
-  font-variant: small-caps;
-  color: $secondary-text;
-}
 
 button{
   border: 0;
@@ -102,52 +63,6 @@ button{
   &:hover{
     text-decoration: none;
   }
-}
-
-article{
-  padding: 1rem;
-}
-
-#show-navigation{
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  font-variant: small-caps;
-  border-radius: 2rem;
-  background: $primary-text;
-  margin: 1rem;
-  color: white;
-  font-family: $headline-font-family;
-
-  svg{
-    margin-right: 1rem;
-  }
-}
-
-#hide-navigation{
-  display: none;
-  background: transparent;
-}
-
-.mobile-nav-shown{
-  overflow: hidden;
-
-  ul{
-    display: flex;
-
-  }
-
-  #hide-navigation{
-    display: block;
-    position: fixed;
-    left: 50%;
-    bottom: 1rem;
-    margin-left: -1.5rem;
-  }
-}
-
-.post-content{
-  padding-top: 2px;
 }
 
 #cover{
@@ -175,19 +90,17 @@ article{
 
   a{
     cursor: zoom-in;
+    display: block;
   }
   
   img{
-    max-height: 95vh;
-    width: auto;
-    max-width: 100%;
     display: block;
-    box-shadow: 0 0 4px -2px rgba(0,0,0,1);
+    width: 100%;
   }
 
   figcaption{
     font-size: $small-font-size;
-    font-family: $caption-font-family;
+    font-family: $secondary-font-family;
     line-height: 1.4;
     color: $secondary-text;
     padding-top: .25rem;
@@ -240,7 +153,76 @@ article{
   }
 }
 
+
+article{
+  width: 100%;
+  max-width: 640px;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+.post-header{
+  display: flex;
+  flex-direction: column;
+
+  time{
+    order: 1;
+    font-family: $secondary-font-family;
+    font-size: $small-font-size;
+    line-height: 1;
+    color: $secondary-text;
+    padding-bottom: .25rem;
+  }
+
+  h1,h2{
+    order: 2;
+    /*padding-bottom: .25rem;*/
+
+    a{
+      color: $primary-text;
+    }
+  }
+}
+
+/*small screen adjustments*/
 @media screen and (max-width: 48rem){
+  #show-navigation{
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  font-variant: small-caps;
+  border-radius: 2rem;
+  background: $primary-text;
+  margin: 1rem;
+  color: white;
+  font-family: $base-font-family;
+
+  svg{
+    margin-right: 1rem;
+  }
+}
+
+#hide-navigation{
+  display: none;
+  background: transparent;
+}
+
+.mobile-nav-shown{
+  overflow: hidden;
+
+  ul{
+    display: flex;
+
+  }
+
+  #hide-navigation{
+    display: block;
+    position: fixed;
+    left: 50%;
+    bottom: 1rem;
+    margin-left: -1.5rem;
+  }
+}
   nav{
     display: flex;
 
@@ -275,7 +257,7 @@ article{
       align-items: center;
       color: $background-color;
       text-shadow: 0px 0px 10px rgba(0,0,0,.5);
-      font-family: $headline-font-family;
+      font-family: $base-font-family;
       text-transform: uppercase;
       font-size: $large-font-size;
       box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
@@ -386,48 +368,11 @@ article{
       display: none;
     }
   }
-
-  article{
-    display: flex;
-  }
-
-  .post-header{
-    text-align: right;
-    padding-right: 1rem;
-    width: 35%;
-    margin-top: -.125rem;
-    
-    h2{
-      max-width: 20rem;
-    }
-  }
-
-  .post{
-    width: 65%;
-    p,blockquote{
-      max-width: 40rem;
-    }
-
-    ol,ul{
-      max-width: 38rem;
-    }
-  }
-
-  .pagination{
-    margin: 0 0 2rem 35%;
-    width: 65%;
-  }
 }
-
 @media screen and (min-width: 80rem) {
 
   #cover{
     background: #767676 url('/images/covers/bg-large.jpg') center center;
     background-size: cover;
   }
-}
-
-
-.disabled{
-  color: $disabled-text;
 }
