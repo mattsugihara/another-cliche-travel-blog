@@ -50,9 +50,13 @@ function getImage(figureID) {
 
 
 function openLightbox(figureID) {
-	let imgCaption = document.querySelector('#' + figureID + ' figcaption').innerText;
 
-	if (0 < imgCaption.length){
+	let imgCaption;
+	if (document.querySelector('#' + figureID + ' figcaption')){
+		imgCaption = document.querySelector('#' + figureID + ' figcaption').innerText;
+	}
+	
+	if (imgCaption){
 		document.querySelector('#lightbox figure').innerHTML +=
 			'<figcaption>' + imgCaption + '</figcaption';
 	}
