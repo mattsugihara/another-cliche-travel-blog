@@ -2,5 +2,7 @@
 	<a href="{{ site.baseurl }}/images/{{ include.name }}">
 		<img src="{{ site.baseurl }}/images/small/{{ include.name }}" alt="{{ include.caption }}">
 	</a>
-	<figcaption>{{include.caption}}</figcaption>
+	{% if include.caption != '' %}
+		<figcaption>{{ include.caption }}</figcaption>
+	{% endif %}
 </figure>

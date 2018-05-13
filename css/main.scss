@@ -13,9 +13,9 @@ $secondary-font-family: "Inconsolata", mono;
 $small-font-size:   0.875rem;
 $large-font-size: 2rem;
 
-$primary-text:      #402121;
-$secondary-text:  #767676;
-$background-color:  #FAFAFA;
+$primary-text: rgba(0,0,0,.8);
+$secondary-text:  rgba(0,0,0,.64);
+$background-color:  rgb(255,255,255);
 $link-color:    #1974d1;
 $disabled-text:   #AAAAAA;
 
@@ -103,7 +103,7 @@ button{
     font-family: $secondary-font-family;
     line-height: 1.4;
     color: $secondary-text;
-    padding-top: .25rem;
+    padding-top: .5rem;
   }
 }
 
@@ -357,7 +357,8 @@ article{
     a{
       color: inherit;
       padding: 1rem;
-      font-size: $base-font-size;
+      font-size: $small-font-size;
+      font-family: $secondary-font-family;
 
       &:hover{
         color: $link-color;
