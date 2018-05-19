@@ -12,7 +12,8 @@ if ("ontouchstart" in document.documentElement) {
 var coverImage = new Image();
 
 coverImage.onload = function(){
-	document.querySelector('#cover').setAttribute('style','background-image: url(' + coverImage.src + ');')
+	document.querySelector('#cover').setAttribute('style','background-image: url('
+		+ coverImage.src + ');')
 };
 
 coverImage.src = document.querySelector('#cover').getAttribute('data-image');
@@ -51,12 +52,10 @@ function getImage(figureID) {
 
 function openLightbox(figureID) {
 
-	let imgCaption;
 	if (document.querySelector('#' + figureID + ' figcaption')){
-		imgCaption = document.querySelector('#' + figureID + ' figcaption').innerText;
-	}
-	
-	if (imgCaption){
+		let imgCaption = document.querySelector('#' + figureID +
+			' figcaption').innerText;
+		
 		document.querySelector('#lightbox figure').innerHTML +=
 			'<figcaption>' + imgCaption + '</figcaption';
 	}

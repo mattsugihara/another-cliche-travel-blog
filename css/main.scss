@@ -270,6 +270,10 @@ article{
   }
 
   #nav{
+    &-taiwan{
+      background: #767676 url('/images/covers/taiwan-small.jpg') no-repeat center center;
+      background-size: cover;
+    }
     &-banff{
       background: #767676 url('/images/covers/banff-small.jpg') no-repeat center center;
       background-size: cover;
