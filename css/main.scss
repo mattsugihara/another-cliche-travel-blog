@@ -74,6 +74,7 @@ button{
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5rem;
 
   div{
     background: rgba(255,255,255,.95);
@@ -102,7 +103,7 @@ button{
     color: $secondary-text;
   }
 
-  .blorp{
+  #show-navigation{
     font-family: $secondary-font-family;
     color: $secondary-text;
     border: 1px solid $secondary-text;
@@ -208,21 +209,49 @@ article{
   }
 }
 
-/*small screen adjustments*/
-@media screen and (max-width: 48rem){
-  #show-navigation{
-  padding: 1rem;
+nav{
   display: flex;
-  align-items: center;
-  font-variant: small-caps;
-  border-radius: 2rem;
-  background: $primary-text;
-  margin: 1rem;
-  color: white;
-  font-family: $base-font-family;
 
-  svg{
-    margin-right: 1rem;
+  li:last-child{
+    padding-right: 1rem;
+  }
+
+  ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.9);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;    /* webkit inertial scrolling */
+    display: none;
+  }
+
+  a{
+    width: 75vw;
+    max-width: 20rem;
+    height: 80vh;
+    margin: 1rem 0 0 1rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $background-color;
+    text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    font-family: $base-font-family;
+    text-transform: uppercase;
+    font-size: $large-font-size;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+
+
+    &:hover{
+      text-decoration: none;
+    }
   }
 }
 
@@ -247,97 +276,51 @@ article{
     margin-left: -1.5rem;
   }
 }
-  nav{
-    display: flex;
 
-    li:last-child{
-      padding-right: 1rem;
-    }
-
-    ul{
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      position: fixed;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      background: rgba(0,0,0,.9);
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;    /* webkit inertial scrolling */
-      display: none;
-    }
-
-    a{
-      width: 75vw;
-      max-width: 20rem;
-      height: 80vh;
-      margin: 1rem 0 0 1rem;
-      border-radius: 1rem;
-      padding: 1rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: $background-color;
-      text-shadow: 0px 0px 10px rgba(0,0,0,.5);
-      font-family: $base-font-family;
-      text-transform: uppercase;
-      font-size: $large-font-size;
-      box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-
-
-      &:hover{
-        text-decoration: none;
-      }
-    }
+#nav{
+  &-taiwan{
+    background: #767676 url('/images/covers/taiwan-small.jpg') no-repeat center center;
+    background-size: cover;
   }
-
-  #nav{
-    &-taiwan{
-      background: #767676 url('/images/covers/taiwan-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-banff{
-      background: #767676 url('/images/covers/banff-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-kauai-2{
-      background: #767676 url('/images/covers/kauai-2-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-cuba{
-      background: #767676 url('/images/covers/cuba-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-kauai{
-      background: #767676 url('/images/covers/kauai-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-iceland{
-      background: #767676 url('/images/covers/iceland-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-costa-rica{
-      background: #767676 url('/images/covers/costa-rica-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-singapore{
-      background: #767676 url('/images/covers/singapore-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-india{
-      background: #767676 url('/images/covers/india-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-thailand{
-      background: #767676 url('/images/covers/thailand-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
-    &-all{
-      background: #767676 url('/images/covers/bg-small.jpg') no-repeat center center;
-      background-size: cover;
-    }
+  &-banff{
+    background: #767676 url('/images/covers/banff-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-kauai-2{
+    background: #767676 url('/images/covers/kauai-2-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-cuba{
+    background: #767676 url('/images/covers/cuba-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-kauai{
+    background: #767676 url('/images/covers/kauai-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-iceland{
+    background: #767676 url('/images/covers/iceland-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-costa-rica{
+    background: #767676 url('/images/covers/costa-rica-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-singapore{
+    background: #767676 url('/images/covers/singapore-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-india{
+    background: #767676 url('/images/covers/india-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-thailand{
+    background: #767676 url('/images/covers/thailand-small.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  &-all{
+    background: #767676 url('/images/covers/bg-small.jpg') no-repeat center center;
+    background-size: cover;
   }
 }
 
@@ -347,41 +330,6 @@ article{
   #cover{
     background: #767676 url('/images/covers/bg-medium.jpg') center center;
     background-size: cover;
-  }
-
-  #show-navigation{
-    display: none;
-  }
-
-  nav{
-    justify-content: center;
-    ul{
-      position: relative;
-      list-style: none;
-      display: flex;
-      background: inherit;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    li{
-      flex-basis: auto;
-    }
-
-    a{
-      color: inherit;
-      padding: 1rem;
-      font-size: $small-font-size;
-      font-family: $secondary-font-family;
-
-      &:hover{
-        color: $link-color;
-      }
-    }
-
-    button{
-      display: none;
-    }
   }
 }
 @media screen and (min-width: 80rem) {
