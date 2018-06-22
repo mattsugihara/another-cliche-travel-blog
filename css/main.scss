@@ -9,11 +9,11 @@ $base-font-family:  "Open sans", sans-serif;
 $base-font-size:  1rem;
 $base-line-height:  2rem;
 
-$secondary-font-family: "Inconsolata", mono;
+$secondary-font-family: "PT Mono", mono;
 $small-font-size:   0.875rem;
 $large-font-size: 2rem;
 
-$primary-text: rgba(0,0,0,.8);
+$primary-text: rgba(0,0,0,.92);
 $secondary-text:  rgba(0,0,0,.64);
 $background-color:  rgb(255,255,255);
 $link-color:    #1974d1;
@@ -71,18 +71,43 @@ button{
   display: flex;
   background: #767676 center center;
   background-size: cover;
-  text-shadow: 0px 0px 10px rgba(0,0,0,.5);
-  justify-content: flex-end;
-  align-items: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   div{
-    margin-bottom: 2rem;
+    background: rgba(255,255,255,.95);
+    color: $primary-text;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    max-width: 25rem;
+    max-height: 25rem;
+    text-align: center;
   }
-}
 
-#cover a{
-  color: #FFFFFF;
-  text-decoration: none
+  h1{
+    font-family: $base-font-family;
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+
+  h2{
+    font-family: $secondary-font-family;
+    font-size: 1rem;
+    font-weight: 400;
+    color: $secondary-text;
+  }
+
+  .blorp{
+    font-family: $secondary-font-family;
+    color: $secondary-text;
+    border: 1px solid $secondary-text;
+    padding: .75rem;
+  }
 }
 
 .image-figure{
@@ -176,7 +201,6 @@ article{
 
   h1,h2{
     order: 2;
-    /*padding-bottom: .25rem;*/
 
     a{
       color: $primary-text;
@@ -323,20 +347,6 @@ article{
   #cover{
     background: #767676 url('/images/covers/bg-medium.jpg') center center;
     background-size: cover;
-    justify-content: flex-end;
-    align-items: flex-end;
-
-    div{
-      margin-bottom: 2rem;
-    }
-
-    h1{
-      font-size: 3.8rem;
-      line-height: 4rem;
-    }
-    h2{
-      font-size: 2rem;
-    }
   }
 
   #show-navigation{
