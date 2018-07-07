@@ -5,7 +5,7 @@
 
 
 /* variables */
-$base-font-family:  "Open sans", sans-serif;
+$base-font-family: "Open Sans", sans-serif;
 $base-font-size:  1rem;
 $base-line-height:  2rem;
 
@@ -53,15 +53,20 @@ ol,ul{
 
 
 button{
-  border: 0;
-  border-radius: 0;
-  background: $background-color;
-  cursor: pointer;
-  font-size: $base-font-size;
-  font-family: $base-font-family;
+  font-family: $secondary-font-family;
+  color: $secondary-text;
+  border: 1px solid $secondary-text;
+  padding: .75rem;
+
+  &:hover{
+    background: $primary-text;
+    color: white;
+    transition: all ease 350ms;
+  }
 
   &:hover{
     text-decoration: none;
+    cursor: pointer;
   }
 }
 
@@ -77,7 +82,7 @@ button{
   margin-bottom: 5rem;
 
   div{
-    background: rgba(255,255,255,.95);
+    background: rgba(255,255,255,.98);
     color: $primary-text;
     padding: 2rem;
     display: flex;
@@ -88,10 +93,11 @@ button{
     max-width: 25rem;
     max-height: 25rem;
     text-align: center;
+    box-shadow: 0 0 48px rgba(0,0,0,.1)
   }
 
   h1{
-    font-family: $base-font-family;
+    font-family: "Cardo", serif;
     font-size: 2.5rem;
     line-height: 3rem;
   }
@@ -102,13 +108,26 @@ button{
     font-weight: 400;
     color: $secondary-text;
   }
+}
 
-  #show-navigation{
-    font-family: $secondary-font-family;
-    color: $secondary-text;
-    border: 1px solid $secondary-text;
-    padding: .75rem;
+#show-navigation{
+  font-family: $secondary-font-family;
+  color: $secondary-text;
+  border: 1px solid $secondary-text;
+  padding: .75rem;
+
+  &:hover{
+    background: $primary-text;
+    color: white;
+    transition: all ease 350ms;
   }
+}
+
+figcaption{
+  font-size: $small-font-size;
+  font-family: $secondary-font-family;
+  line-height: 1.4;
+  color: $secondary-text;
 }
 
 .image-figure{
@@ -125,10 +144,6 @@ button{
   }
 
   figcaption{
-    font-size: $small-font-size;
-    font-family: $secondary-font-family;
-    line-height: 1.4;
-    color: $secondary-text;
     padding-top: .5rem;
   }
 }
@@ -165,9 +180,6 @@ button{
     right: 0;
     left: 0;
     padding: .5rem;
-    font-size: .75rem;
-    line-height: 1.4;
-    color: $secondary-text;
   }
 }
 
