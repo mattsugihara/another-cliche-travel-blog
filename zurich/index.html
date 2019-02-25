@@ -1,0 +1,24 @@
+---
+layout: feed
+image: "/images/covers/singapore-medium.jpg"
+---
+<style>
+#cover{
+	background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/2wBDAAEBAQEBAQIBAQIDAgICAwQDAwMDBAUEBAQEBAUGBQUFBQUFBgYGBgYGBgYHBwcHBwcICAgICAkJCQkJCQkJCQn/2wBDAQEBAQICAgQCAgQJBgUGCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQkJCQn/wAARCAAeACgDASIAAhEBAxEB/8QAHAAAAgICAwAAAAAAAAAAAAAAAAoFCAcJAQYL/8QALhAAAgEDAgYBAgUFAAAAAAAAAQIDBAUGERIABwgTITEJIkEUMlFhgRUWI2Kh/8QAGQEAAgMBAAAAAAAAAAAAAAAAAwQBBQYH/8QALhEAAQIDBAcJAQAAAAAAAAAAAQIDABEhBAUSgQYHEyJBUZEUIzFhcXKx4fDR/9oADAMBAAIRAxEAPwBXjowuOBWO3TZJzKq6WzW2juNJWCV6czvuRHdQ0qbnSJ1BGm1hu2+j7cA+F75ZOiLpB6FsrxSpmrr/AJVR5BHL+BtdI3duKVcCGOeKSTaO1CiFXaTaVOihTqOEisw6gabNsFqbHkOP2+1SiSNKg25TR1DtppGJUZWDgaEj0ffnjb58fWX8teXvTNki3mx281V1tk9AHq67bLdWd20gkgQqRFubb3gQ6j6d2mmlY48ho4wZS5xFiaC+7cG78x6AfJrq66Yute0Vh5aVtdRZNFTpXVNkvdM9BXrA3juxxyjSojB8GSBnVdRu01HELlHT9kuRhnt9MixyH88rogJOvnyfX8cI38susHJa3nXjmdZDHQWK42Vaehtt0t1YaZkWmWRUjCOzLUJoSNygFdWRmIJB21dK3yPcpeibIpsR5j1tbe8VypHqZpqivNZV22SmUDdTQSEdyAqT3lQ9xDsZQV3cdI0S1jPMN7J2UuZ4D0+6Rj790EYWS8wT7fs/ysMZYl0lcuMTuEd6y2SC4zJDudJDviSQk+FQAbtB92JGv24OFmOtz5t8GzpYMK5BVItuB1bxG7XgT9qvMZ7TSRxwbg6AhyAyhy+0jVVPk4y2l+s61otY2KVuggHEkhI40Ar1884uLguJpuzgSCZ1lKeZNIX3yyivWPUtA2IUlJkclynpaaXWiimeCLVRJUPLtYsVUEAuSAD+unHQeb1htd0z7Eb5iOR0N1t1linSqO6Ol7tRJUb4wKeGPZ2o1CqW8kgEnX1xWCjyLMLtEIam4yCL8vbjPbQD9AqbRp/HGTXoKjD8Xt98u1XM8V27jww0xCM3bYo3dlI3KNR4ADgj9Dww/daFIwrENN2gg7sXvseX8jr1jVtoeZdmWvu9tolozJbXpKdWMkQSeoRaynV+67btNg8hiffuEv8Abehm5Xf+68kosrF3TQor1lIPKjQf44Ygqr5I2lQNDxQVMvuNQHp7aiUMfphDqHYf7SHVz+/nT9uOIalovr9kaHU8KputlPhPrDnbVylTpFv7RD0NW+7VVslkypf6xGtKaKOalUPru7SqqxrqQzfTqGI+xHvg4wHyekS5c27Mssav+HkepAcajWGNnX/oHBwFy4mXTiUT+ygZtykUwj9nH//Z);
+}
+</style>
+{% for post in site.categories["zurich"] reversed %}
+<article>
+	<header class="post-header">
+	<h2>
+		<a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+	</h2>
+	<time datetime="{{ post.date | date_to_xmlschema }}">
+		{{ post.date | date: "%B %-d, %Y" }}
+	</time>
+	</header>
+	<div class="post">
+		{{ post.content }}
+	</div>
+</article>
+{% endfor %}
