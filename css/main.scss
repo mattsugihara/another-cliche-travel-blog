@@ -5,12 +5,13 @@
 
 
 /* variables */
-$base-font-family: "Open Sans", sans-serif;
-$base-font-size:  1rem;
+$base-font-family: Baskerville, serif;
+$base-font-size:  1.25rem;
 $base-line-height:  2rem;
 
-$secondary-font-family: "PT Mono", mono;
-$small-font-size:   0.875rem;
+$secondary-font-family: "Oswald", sans-serif;
+
+$small-font-size: .75rem;
 $large-font-size: 2rem;
 
 $primary-text: rgba(0,0,0,.92);
@@ -70,6 +71,10 @@ button{
   }
 }
 
+h1,h2{
+  font-family: $secondary-font-family;
+}
+
 #cover{
   height: 100vh;
   padding: 1rem;
@@ -97,13 +102,11 @@ button{
   }
 
   h1{
-    font-family: "Cardo", serif;
     font-size: 2.5rem;
     line-height: 3rem;
   }
 
   h2{
-    font-family: $secondary-font-family;
     font-size: 1rem;
     font-weight: 400;
     color: $secondary-text;
@@ -125,7 +128,6 @@ button{
 
 figcaption{
   font-size: $small-font-size;
-  font-family: $secondary-font-family;
   line-height: 1.4;
   color: $secondary-text;
 }
@@ -206,6 +208,8 @@ article{
   time{
     order: 1;
     font-family: $secondary-font-family;
+    text-transform: uppercase;
+    font-weight: 300;
     font-size: $small-font-size;
     line-height: 1;
     color: $secondary-text;
@@ -214,6 +218,7 @@ article{
 
   h1,h2{
     order: 2;
+    margin: .25rem 0 .5rem 0;
 
     a{
       color: $primary-text;
