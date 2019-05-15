@@ -1,14 +1,20 @@
 # Site settings
 title: another cliché travel blog
-url: "http://antoherclichetravelblog.com" # the base hostname & protocol for your site
+
+# the base hostname & protocol for your site
+url: "http://antoherclichetravelblog.com"
 
 # Build settings
 markdown: kramdown
-# permalink: :categories/:title/
+
+# setting incremental to true breaks image includes and markdown
+# (at least locally), for some reason
 # incremental: true;
+
+# Number of entries per page
 paginate: 10
 
-# This resizes all images. One one new one for each trip
+# This resizes all images. One entry per trip, listed alphabetically
 mini_magick:
     costa-rica-small:
         source: _unprocessed_images/costa-rica
@@ -50,13 +56,13 @@ mini_magick:
         source: _unprocessed_images/kauai
         destination: images/kauai
         resize: "2000x2000"
-    kauai-2-small:
-        source: _unprocessed_images/kauai-2
-        destination: images/small/kauai-2
+    kalalau-small:
+        source: _unprocessed_images/kalalau
+        destination: images/small/kalalau
         resize: "800x800"
-    kauai-2-large:
-        source: _unprocessed_images/kauai-2
-        destination: images/kauai-2
+    kalalau-large:
+        source: _unprocessed_images/kalalau
+        destination: images/kalalau
         resize: "2000x2000"
     shenanigans-small:
         source: _unprocessed_images/shenanigans
@@ -83,14 +89,14 @@ mini_magick:
         destination: images/thailand
         resize: "2000x2000"
 
-# this makes each post use the post layout
+# Makes each post use the "post" layout
 defaults:
  -
     scope:
       path: ""
     values:
       layout: "post"
-# maybe not, remove if this compiles
-# # this makes pagination work
+
+# This makes pagination work
 plugins:
   - jekyll-paginate
