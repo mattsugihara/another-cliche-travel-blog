@@ -15,79 +15,79 @@ markdown: kramdown
 paginate: 10
 
 # This resizes all images. One entry per trip, listed alphabetically
-mini_magick:
-    costa-rica-small:
-        source: _unprocessed_images/costa-rica
-        destination: images/small/costa-rica
-        resize: "800x800"
-    costa-rica-large:
-        source: _unprocessed_images/costa-rica
-        destination: images/costa-rica
-        resize: "2000x2000"
-    cuba-small:
-        source: _unprocessed_images/cuba
-        destination: images/small/cuba
-        resize: "800x800"
-    cuba-large:
-        source: _unprocessed_images/cuba
-        destination: images/cuba
-        resize: "2000x2000"
-    iceland-small:
-        source: _unprocessed_images/iceland
-        destination: images/small/iceland
-        resize: "800x800"
-    iceland-large:
-        source: _unprocessed_images/iceland
-        destination: images/iceland
-        resize: "2000x2000"
-    india-small:
-        source: _unprocessed_images/india
-        destination: images/small/india
-        resize: "800x800"
-    india-large:
-        source: _unprocessed_images/india
-        destination: images/india
-        resize: "2000x2000"
-    kauai-small:
-        source: _unprocessed_images/kauai
-        destination: images/small/kauai
-        resize: "800x800"
-    kauai-large:
-        source: _unprocessed_images/kauai
-        destination: images/kauai
-        resize: "2000x2000"
-    kalalau-small:
-        source: _unprocessed_images/kalalau
-        destination: images/small/kalalau
-        resize: "800x800"
-    kalalau-large:
-        source: _unprocessed_images/kalalau
-        destination: images/kalalau
-        resize: "2000x2000"
-    shenanigans-small:
-        source: _unprocessed_images/shenanigans
-        destination: images/small/shenanigans
-        resize: "800x800"
-    shenanigans-large:
-        source: _unprocessed_images/shenanigans
-        destination: images/shenanigans
-        resize: "2000x2000"
-    singapore-small:
-        source: _unprocessed_images/singapore
-        destination: images/small/singapore
-        resize: "800x800"
-    singapore-large:
-        source: _unprocessed_images/singapore
-        destination: images/singapore
-        resize: "2000x2000"
-    thailand-small:
-        source: _unprocessed_images/thailand
-        destination: images/small/thailand
-        resize: "800x800"
-    thailand-large:
-        source: _unprocessed_images/thailand
-        destination: images/thailand
-        resize: "2000x2000"
+# mini_magick:
+#     costa-rica-small:
+#         source: _unprocessed_images/costa-rica
+#         destination: images/small/costa-rica
+#         resize: "800x800"
+#     costa-rica-large:
+#         source: _unprocessed_images/costa-rica
+#         destination: images/costa-rica
+#         resize: "2000x2000"
+#     cuba-small:
+#         source: _unprocessed_images/cuba
+#         destination: images/small/cuba
+#         resize: "800x800"
+#     cuba-large:
+#         source: _unprocessed_images/cuba
+#         destination: images/cuba
+#         resize: "2000x2000"
+#     iceland-small:
+#         source: _unprocessed_images/iceland
+#         destination: images/small/iceland
+#         resize: "800x800"
+#     iceland-large:
+#         source: _unprocessed_images/iceland
+#         destination: images/iceland
+#         resize: "2000x2000"
+#     india-small:
+#         source: _unprocessed_images/india
+#         destination: images/small/india
+#         resize: "800x800"
+#     india-large:
+#         source: _unprocessed_images/india
+#         destination: images/india
+#         resize: "2000x2000"
+#     kauai-small:
+#         source: _unprocessed_images/kauai
+#         destination: images/small/kauai
+#         resize: "800x800"
+#     kauai-large:
+#         source: _unprocessed_images/kauai
+#         destination: images/kauai
+#         resize: "2000x2000"
+#     kalalau-small:
+#         source: _unprocessed_images/kalalau
+#         destination: images/small/kalalau
+#         resize: "800x800"
+#     kalalau-large:
+#         source: _unprocessed_images/kalalau
+#         destination: images/kalalau
+#         resize: "2000x2000"
+#     shenanigans-small:
+#         source: _unprocessed_images/shenanigans
+#         destination: images/small/shenanigans
+#         resize: "800x800"
+#     shenanigans-large:
+#         source: _unprocessed_images/shenanigans
+#         destination: images/shenanigans
+#         resize: "2000x2000"
+#     singapore-small:
+#         source: _unprocessed_images/singapore
+#         destination: images/small/singapore
+#         resize: "800x800"
+#     singapore-large:
+#         source: _unprocessed_images/singapore
+#         destination: images/singapore
+#         resize: "2000x2000"
+#     thailand-small:
+#         source: _unprocessed_images/thailand
+#         destination: images/small/thailand
+#         resize: "800x800"
+#     thailand-large:
+#         source: _unprocessed_images/thailand
+#         destination: images/thailand
+#         resize: "2000x2000"
 
 # Makes each post use the "post" layout
 defaults:
