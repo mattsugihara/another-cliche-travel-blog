@@ -1,6 +1,6 @@
 ---
 title: "Japan, we gotta talk"
-pubdate: "2015-01-14 10:01:19"
+location: 
 ---
 
 First, I want you to know that I'm not mad, I'm just disappointed. How could I not be? Fifteen years ago, coming here was, for all intents and purposes, coming to the future. Everywhere I looked I saw cellphones whose *least* remarkable feature was polyphonic ringtones. It took two full years after I got back for phones could do more than squeak at us. Ubiquitous photo booths with facial recognition features that rival Google Hangouts today. LED displays I *still* haven't seen in the US. It was incredible. And hanging out in Narita today, it's clear you're still an affluent, tech savvy country. Walking through the terminal is a whose who of mass market fashion: Hermès, Ferragamo, Dior, Coach, all on display like it's Union Square. Cell phones have improved, but nothing that stands out from what we have in the U.S. Really, the only novel bit of tech I've come across has been vertically scrolling LED arrays, and those only because the orientation doesn't work in English. It would seem we've finally achieved tech parity. And for the most part that's cool, I get it. Flagging economy, aging workforce, increased demand in the U.S. But you need to think long and hard about what the hell happened to your vending machines.

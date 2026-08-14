@@ -1,5 +1,6 @@
 ---
 title: "Leaving on a jet plane"
+location: 
 ---
 Starting something always seems like the hardest part. Once things are in motion, the easy thing to do is to continue. You have s goal, you've started working towards it, any obstacles that crop up are just part of getting the job done. But starting, taking that sometimes literal first step is always more difficult than it has any right to be.
 

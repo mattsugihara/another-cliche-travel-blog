@@ -1,5 +1,6 @@
 ---
 title: "Larkspur ferry, again"
+location: 
 ---
 Is ferry thing is becoming a bit of a tradition. Part of it is its convenience, but I also just like the view.
 

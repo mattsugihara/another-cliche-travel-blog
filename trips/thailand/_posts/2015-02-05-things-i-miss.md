@@ -1,6 +1,6 @@
 ---
 title: "Things I Miss"
-pubdate: "2015-02-16 01:48:05"
+location: 
 ---
 
  1. Cheese

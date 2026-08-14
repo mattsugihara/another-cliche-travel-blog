@@ -1,5 +1,6 @@
 ---
 title: "Prepping for Tahoe"
+location: 
 ---
 Just getting ready for Tahoe and testing this shit out.
 

@@ -1,32 +1,31 @@
 ---
 ---
+
 @charset "utf-8";
-
-
 
 /* variables */
 $base-font-family: Baskerville, serif;
-$base-font-size:  1.25rem;
-$base-line-height:  2rem;
+$base-font-size: 1.25rem;
+$base-line-height: 2rem;
 
 $secondary-font-family: "Oswald", sans-serif;
 
-$small-font-size: .75rem;
+$small-font-size: 0.75rem;
 $large-font-size: 2rem;
 
-$primary-text: rgba(0,0,0,.92);
-$secondary-text:  rgba(0,0,0,.64);
-$background-color:  rgb(255,255,255);
-$link-color:    #1974d1;
-$disabled-text:   #AAAAAA;
+$primary-text: rgba(0, 0, 0, 0.92);
+$secondary-text: rgba(0, 0, 0, 0.64);
+$background-color: rgb(255, 255, 255);
+$link-color: #1974d1;
+$disabled-text: #aaaaaa;
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+body {
   border: 0;
   outline: 0;
   color: $primary-text;
@@ -37,45 +36,45 @@ body{
   word-wrap: break-word;
 }
 
-a{
+a {
   text-decoration: none;
   color: $link-color;
 }
 
-
-p{
+p {
   padding-bottom: 1rem;
 }
 
-ol,ul{
+ol,
+ul {
   margin-left: 2rem;
   padding-bottom: 1rem;
 }
 
-
-button{
+button {
   font-family: $secondary-font-family;
   color: $secondary-text;
   border: 1px solid $secondary-text;
-  padding: .75rem;
+  padding: 0.75rem;
 
-  &:hover{
+  &:hover {
     background: $primary-text;
     color: white;
     transition: all ease 350ms;
   }
 
-  &:hover{
+  &:hover {
     text-decoration: none;
     cursor: pointer;
   }
 }
 
-h1,h2{
+h1,
+h2 {
   font-family: $secondary-font-family;
 }
 
-#cover{
+#cover {
   height: 100vh;
   padding: 1rem;
   display: flex;
@@ -86,8 +85,8 @@ h1,h2{
   align-items: center;
   margin-bottom: 5rem;
 
-  div{
-    background: rgba(255,255,255,.98);
+  div {
+    background: rgba(255, 255, 255, 0.98);
     color: $primary-text;
     padding: 2rem;
     display: flex;
@@ -98,63 +97,63 @@ h1,h2{
     max-width: 25rem;
     max-height: 25rem;
     text-align: center;
-    box-shadow: 0 0 48px rgba(0,0,0,.1)
+    box-shadow: 0 0 48px rgba(0, 0, 0, 0.1);
   }
 
-  h1{
+  h1 {
     font-size: 2.5rem;
     line-height: 3rem;
   }
 
-  h2{
+  h2 {
     font-size: 1rem;
     font-weight: 400;
     color: $secondary-text;
   }
 }
 
-#show-navigation{
+#show-navigation {
   font-family: $secondary-font-family;
   color: $secondary-text;
   border: 1px solid $secondary-text;
-  padding: .75rem;
+  padding: 0.75rem;
 
-  &:hover{
+  &:hover {
     background: $primary-text;
     color: white;
     transition: all ease 350ms;
   }
 }
 
-figcaption{
+figcaption {
   font-size: $small-font-size;
   line-height: 1.4;
   color: $secondary-text;
 }
 
-.image-figure{
+.image-figure {
   padding: 1rem 0;
 
-  a{
+  a {
     cursor: zoom-in;
     display: block;
   }
-  
-  img{
+
+  img {
     display: block;
     width: 100%;
   }
 
-  figcaption{
-    padding-top: .5rem;
+  figcaption {
+    padding-top: 0.5rem;
   }
 }
 
-.supports-touch #lightbox{
+.supports-touch #lightbox {
   overflow: auto !important;
 }
 
-#lightbox{
+#lightbox {
   -webkit-overflow-scrolling: touch;
   overflow: hidden;
   position: fixed;
@@ -165,27 +164,27 @@ figcaption{
   display: block;
   pointer-events: none;
   opacity: 0;
-  transition: opacity .25s ease;
+  transition: opacity 0.25s ease;
   will-change: transform, opacity;
   cursor: zoom-out;
 
-  &.visible{
+  &.visible {
     pointer-events: all;
     opacity: 1;
-    background: rgba(0,0,0,.9);
+    background: rgba(0, 0, 0, 0.9);
   }
 
-  figcaption{
+  figcaption {
     position: fixed;
-    background: rgba(255,255,255,.95);
+    background: rgba(255, 255, 255, 0.95);
     bottom: 0;
     right: 0;
     left: 0;
-    padding: .5rem;
+    padding: 0.5rem;
   }
 }
 
-.pagination{
+.pagination {
   display: flex;
 
   > * {
@@ -193,19 +192,18 @@ figcaption{
   }
 }
 
-
-article{
+article {
   width: 100%;
   max-width: 640px;
   padding: 0rem 1rem 4.5rem 1rem;
   margin: 0 auto;
 }
 
-.post-header{
+.post-header {
   display: flex;
   flex-direction: column;
 
-  time{
+  time {
     order: 1;
     font-family: $secondary-font-family;
     text-transform: uppercase;
@@ -213,27 +211,28 @@ article{
     font-size: $small-font-size;
     line-height: 1;
     color: $secondary-text;
-    padding-bottom: .25rem;
+    padding-bottom: 0.25rem;
   }
 
-  h1,h2{
+  h1,
+  h2 {
     order: 2;
-    margin: .25rem 0 .5rem 0;
+    margin: 0.25rem 0 0.5rem 0;
 
-    a{
+    a {
       color: $primary-text;
     }
   }
 }
 
-nav{
+nav {
   display: flex;
 
-  li:last-child{
+  li:last-child {
     padding-right: 1rem;
   }
 
-  ul{
+  ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -242,13 +241,13 @@ nav{
     right: 0;
     bottom: 0;
     left: 0;
-    background: rgba(0,0,0,.9);
+    background: rgba(0, 0, 0, 0.9);
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;    /* webkit inertial scrolling */
+    -webkit-overflow-scrolling: touch; /* webkit inertial scrolling */
     display: none;
   }
 
-  a{
+  a {
     width: 75vw;
     max-width: 20rem;
     height: 80vh;
@@ -259,33 +258,33 @@ nav{
     justify-content: center;
     align-items: center;
     color: $background-color;
-    text-shadow: 0px 0px 10px rgba(0,0,0,.5);
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     font-family: $base-font-family;
     text-transform: uppercase;
     font-size: $large-font-size;
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    box-shadow:
+      0 19px 38px rgba(0, 0, 0, 0.3),
+      0 15px 12px rgba(0, 0, 0, 0.22);
 
-
-    &:hover{
+    &:hover {
       text-decoration: none;
     }
   }
 }
 
-#hide-navigation{
+#hide-navigation {
   display: none;
   background: transparent;
 }
 
-.mobile-nav-shown{
+.mobile-nav-shown {
   overflow: hidden;
 
-  ul{
+  ul {
     display: flex;
-
   }
 
-  #hide-navigation{
+  #hide-navigation {
     display: block;
     position: fixed;
     left: 50%;
@@ -294,65 +293,74 @@ nav{
   }
 }
 
-#nav{
-  &-taiwan{
-    background: #767676 url('/images/covers/taiwan-small.jpg') no-repeat center center;
+#nav {
+  &-taiwan {
+    background: #767676 url("/images/covers/taiwan-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-banff{
-    background: #767676 url('/images/covers/banff-small.jpg') no-repeat center center;
+  &-banff {
+    background: #767676 url("/images/covers/banff-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-kalalau{
-    background: #767676 url('/images/covers/kalalau-small.jpg') no-repeat center center;
+  &-kalalau {
+    background: #767676 url("/images/covers/kalalau-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-cuba{
-    background: #767676 url('/images/covers/cuba-small.jpg') no-repeat center center;
+  &-cuba {
+    background: #767676 url("/images/covers/cuba-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-kauai{
-    background: #767676 url('/images/covers/kauai-small.jpg') no-repeat center center;
+  &-kauai {
+    background: #767676 url("/images/covers/kauai-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-iceland{
-    background: #767676 url('/images/covers/iceland-small.jpg') no-repeat center center;
+  &-iceland {
+    background: #767676 url("/images/covers/iceland-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-costa-rica{
-    background: #767676 url('/images/covers/costa-rica-small.jpg') no-repeat center center;
+  &-costa-rica {
+    background: #767676 url("/images/covers/costa-rica-small.jpg") no-repeat
+      center center;
     background-size: cover;
   }
-  &-singapore{
-    background: #767676 url('/images/covers/singapore-small.jpg') no-repeat center center;
+  &-singapore {
+    background: #767676 url("/images/covers/singapore-small.jpg") no-repeat
+      center center;
     background-size: cover;
   }
-  &-india{
-    background: #767676 url('/images/covers/india-small.jpg') no-repeat center center;
+  &-india {
+    background: #767676 url("/images/covers/india-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
-  &-thailand{
-    background: #767676 url('/images/covers/thailand-small.jpg') no-repeat center center;
+  &-thailand {
+    background: #767676 url("/images/covers/thailand-small.jpg") no-repeat
+      center center;
     background-size: cover;
   }
-  &-all{
-    background: #767676 url('/images/covers/bg-small.jpg') no-repeat center center;
+  &-all {
+    background: #767676 url("/images/covers/bg-small.jpg") no-repeat center
+      center;
     background-size: cover;
   }
 }
 
 /*medium up*/
 @media screen and (min-width: 48rem) {
-
-  #cover{
-    background: #767676 url('/images/covers/bg-medium.jpg') center center;
+  #cover {
+    background: #767676 url("/images/covers/bg-medium.jpg") center center;
     background-size: cover;
   }
 }
 @media screen and (min-width: 80rem) {
-
-  #cover{
-    background: #767676 url('/images/covers/bg-large.jpg') center center;
+  #cover {
+    background: #767676 url("/images/covers/bg-large.jpg") center center;
     background-size: cover;
   }
 }

@@ -1,6 +1,6 @@
 ---
 title: "Larkspur Ferry"
-pubdate: "2015-01-12 12:19:14"
+location: 
 ---
 {% include image.html name="thailand/IMG_3077.jpg" caption="#nofilter" %}
 

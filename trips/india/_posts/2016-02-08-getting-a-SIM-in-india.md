@@ -1,5 +1,6 @@
 ---
 title: "Getting a SIM in India"
+location: 
 ---
 
 ## Things you need
