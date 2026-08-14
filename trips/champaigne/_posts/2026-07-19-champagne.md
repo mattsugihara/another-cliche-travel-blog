@@ -1,0 +1,12 @@
+---
+title: Bordeaux tasting
+location: Bordeaux
+---
+
+We got up and out, grabbing coffee from [Oscura](https://www.maison-oscura.com) before meeting up with Maud for tasting. Got into the van, then headed to GG in Pomerol. The tasting was a wine and chocolate pairing, and while the pairings themselves were fine, both the wine and chocolate themselves were fantastic. Payom ended up with a couple cases, and we sent a couple bottles home as well. We then went into the village of Saint Emillion, walked around a little bit, and got a huge lunch from [L’Enver du decor](https://www.envers-dudecor.com), and a coffee from [Café Blanc](https://www.instagram.com/cafeblanc.stemilion/), a super cute little coffee shop with Cuphead-like branding. Coffee was surprisingly good. They also had photographs up on the walls from all over the world, including a shot of snow-covered Bryce. Really neat to see how similar vastly different parts of the world can look. We tried to track down the chocolatier, but the shop was closed as the owner had to attend a baptism.
+
+Post lunch, we toured a cellar (it was nice to get out of the heat), then went to Tour Saint Charles for more tasting. The vineyards themselves were stunningly beautiful with dry-fit stone walls built in the 1800s by Spanish workers, as the French had lost the knowledge of how to build such high quality stone walls. King Juan Carlos also gitfted a couple olive trees to commemorate the whole thing. Toured the cellars, tried the wine. It was decent, but not mind blowing. The charcuterie board served with the wine was just as good.
+
+Following the tour, Maud was kind enough to get us a reservation at [Les Planches Éphemère](https://www.lesplanchesephemeres.fr), an awesome lakeside spot, to watch the World Cup game, Spain vs. Argentina. They had Corona Zeros, which after a day of tasting sounded great (despite the fact that the pours were honest tastes, not full glasses like in Champagne). The chips, guac, mezze, and skewers were fine, but the location was incredible. They’d set up a huge screen right by the side of the lake where we watched the game.
+
+Katie went home early to sleep, followed by Payom an hour or so later, before we finally turned in post-match. I made it back to the hotel room and in bed before Katie woke up, giving her a bit of a surprise when she woke up to check on me being home!
