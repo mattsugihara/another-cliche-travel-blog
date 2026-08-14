@@ -91,8 +91,7 @@ paginate: 10
 
 # Makes each post use the "post" layout
 defaults:
- -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "post"

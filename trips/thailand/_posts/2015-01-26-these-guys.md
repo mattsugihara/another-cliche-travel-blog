@@ -1,6 +1,6 @@
 ---
 title: "These Guys"
-location: 
+location:
 ---
 
 Met up with the last two of our group!

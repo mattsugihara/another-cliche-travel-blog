@@ -1,6 +1,6 @@
 ---
 title: "Alright, fucker"
-location: 
+location:
 ---
 
 Let's do this
