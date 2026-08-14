@@ -13,7 +13,7 @@ Katie and I got lunch a second time from [La Balabusta](https://grupolabalabusta
  - Spinach boreks
  - Broccoli
 
-Following lunch, we went to [Casa Batillo](), a house Gaudi designed. It had an incredibly strong aquatic theme, with almost every surface curved. Really cool to see.
+Following lunch, we went to [Casa Batillo](https://www.casabatllo.es/en/), a house Gaudi designed. It had an incredibly strong aquatic theme, with almost every surface curved. Really cool to see.
 
 We then headed back to Chris and Ivees and laid low for a bit. Dinner was a prix fixe at [Can Cortada](https://cancortada.com/en/), what seemed to be a super traditional catalan meal:
  - It started with calçots (somewhere between a green onion and a leek), roasted till the outer layers are charred then steamed to cook the inside. Eaten by stripping off the outer layers with your hands, then dipping them in a sauce like romesco
