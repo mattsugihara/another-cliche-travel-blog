@@ -12,3 +12,10 @@ You can view it [here](http://anotherclichetravelblog.com).
 ## To run
 
 Run `bundle exec jekyll serve`
+
+## To start a new trip
+
+Run `python3 new_trip.py "<destination>"`
+
+This will create a new directory populated with all the boilerplate and update
+the trips.yml to include the trip.
