@@ -1,6 +1,6 @@
 ---
 title: TKTKTKTK
-location: Épernay, Paris
+location: [Épernay, Paris]
 ---
 
 Woke up slow, waking up at 8 but lounging in bed till 10. Got a quick bite and coffee from the hotel before walking the suitcases to the station. Katie and the girls went to Moët & Chandon for one last glass of champagne before heading out. The train was uneventful, following the Marne for some of the trip, giving us some views of the vallée de la Marne and the surrounding hills. Neat to see all the hills planted with grapes and the flat land with other plants (allegedly sugar beets and what looked like corn, despite our tour guides insistence that all the corn was imported). Once we arrived at Gare de l’Est, we said goodbye to Nicole at the train station, then took cars to our hotel, [Pavillon Faubourg](https://www.pavillon-faubourg-saint-germain.com).

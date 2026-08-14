@@ -1,6 +1,6 @@
 ---
 title: "My Friends are Unmitigated Badasses"
-location:
+location: Chiang Mai
 ---
 
 Waiting for breakfast just before going mountain biking, it occurred to me to text Mark (an avid mountain biker) to say "Hey, I'm doing your sport!" like I do just about every time I'm about to try something new. Then I thought, wait, what _don't_ my friends do? What could I do that they don't already? Stuff that got crossed off the list quickly:

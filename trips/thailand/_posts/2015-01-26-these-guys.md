@@ -1,6 +1,6 @@
 ---
 title: "These Guys"
-location:
+location: Koh Tao
 ---
 
 Met up with the last two of our group!

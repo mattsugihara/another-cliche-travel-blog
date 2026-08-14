@@ -1,6 +1,6 @@
 ---
 title: "Layover at Narita"
-location:
+location: Narita
 ---
 
 I watched a young woman dressed in a smartly tailored uniform stride through the restricted access door and up to the glass. Smiling, she faced the blubberous plane as it clumsily backed out of the gate. The woman waved and bowed towards...who? A coworker? Lover? Her most recent charge? Watching it felt wrong, like ogling a couple in the park. The barriers between them made the small act feel terribly intimate.

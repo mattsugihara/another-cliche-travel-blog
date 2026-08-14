@@ -1,6 +1,6 @@
 ---
 title: "Current Status:"
-location:
+location: Koh Tao
 ---
 
 {% include image.html name="thailand/1449.jpg" caption="" %}

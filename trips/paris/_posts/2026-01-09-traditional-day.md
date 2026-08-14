@@ -1,6 +1,6 @@
 ---
 title: La Sagrada Familia
-location: Barcelona, Spain
+location: Barcelona
 ---
 
 We woke up (relatively) early, after a night I spent trying to sleep and instead heard the church bells chime out the hours (maybe it was the espresso martini from Sips, maybe it was the bright light). Chris walked Katie and I over to [Jaç](https://www.instagram.com/jac.barcelona/) for coffee (I would have loved to hang out there for an hour). In line we made friends with a dog named Boomer and his owners, who had recently moved from LA and chatted with us about the dog immigration process.

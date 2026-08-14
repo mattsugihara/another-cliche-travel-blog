@@ -1,6 +1,6 @@
 ---
 title: "Night Train to Surat Tani"
-location:
+location: [Bangkok, Surat Thani]
 ---
 
 Night trains are the most badass things ever. So cool.

@@ -1,6 +1,6 @@
 ---
 title: "Getting a SIM in India"
-location:
+location: [Delhi, McLeod Ganj]
 ---
 
 ## Things you need

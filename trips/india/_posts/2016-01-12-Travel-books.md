@@ -1,6 +1,6 @@
 ---
 title: "I hate travel books"
-location:
+location: Larkspur
 ---
 
 Seriously. On the one hand, they're a great place to start. I know next to nothing about India, and after spending some time with google and getting an idea of what I'm looking for, I immediately reach for a travel guide. And then hate it because I'm sorry, Tibetan Buddhism isn't a place on any map.

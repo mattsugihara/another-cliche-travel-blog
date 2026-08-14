@@ -1,6 +1,6 @@
 ---
 title: Dinner at Moët & Chandon
-location: Paris, Épernay
+location: [Paris, Épernay]
 ---
 
 Woke up and headed to the train station. Fairly short train from Paris to Épernay. Took a bit to figure out transportation from the train station to the hotel, less than a mile away. Between the luggage and heat, there wasn’t much excitement to walk it. Once we got settled at the hotel, some of us went out to Parrier-Jouët. I tried their Belle-Epoque, while Katie had their standard, and the other three girls had the rose. Each came in it’s own, specially painted glass. I also hadn’t eaten, so I ordered a chicken Cesar. It came in an organically shaped ceramic bowl, reminiscent of a KFC chicken bucket.

@@ -1,6 +1,6 @@
 ---
 title: "Things I Miss"
-location:
+location: Chiang Mai
 ---
 
 1.  Cheese

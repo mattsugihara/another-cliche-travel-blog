@@ -1,6 +1,6 @@
 ---
 title: "Larkspur Ferry"
-location:
+location: [Sebastopol, San Rafael, San Francisco]
 ---
 
 {% include image.html name="thailand/IMG_3077.jpg" caption="#nofilter" %}

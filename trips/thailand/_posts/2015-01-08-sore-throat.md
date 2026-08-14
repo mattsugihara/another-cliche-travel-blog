@@ -1,6 +1,6 @@
 ---
 title: "Sore throat"
-location:
+location: San Francisco
 ---
 
 Awesome. Thanks body. Off to a great start.

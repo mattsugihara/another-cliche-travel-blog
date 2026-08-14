@@ -1,6 +1,6 @@
 ---
 title: Day 0 (Saturday)
-location: Redwood City, Zurich, Paris
+location: [Redwood City, Zurich, Paris]
 ---
 
 Time Shifter had us up at 5am, so we got an early start packing. We took Bailey on a walk, got lunch, and ran a couple errands. It all made for a super relaxed day. Around 5pm Julie picked us and the pup up and took us to tha airport.
