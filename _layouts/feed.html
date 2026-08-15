@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <header>
   <div id="cover" data-image="{{ page.image }}">
     <div>
@@ -13,9 +12,9 @@ layout: default
   <nav>
     <ul>
       {% for trip in site.data.trips %}
-      <li>
-        <a href="/{{ trip[0] }}/" id="nav-{{ trip[0] }}">{{ trip[1] }}</a>
-      </li>
+        <li>
+          <a href="/{{ trip[0] }}/" id="nav-{{ trip[0] }}">{{ trip[1] }}</a>
+        </li>
       {% endfor %}
       <li><a href="/" id="nav-all">Latest Trip</a></li>
     </ul>

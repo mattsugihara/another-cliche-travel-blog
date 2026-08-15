@@ -1,0 +1,52 @@
+.image-figure {
+  padding: 1rem 0;
+
+  a {
+    cursor: zoom-in;
+    display: block;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+  figcaption {
+    padding-top: 0.5rem;
+  }
+}
+
+.supports-touch #lightbox {
+  overflow: auto !important;
+}
+
+#lightbox {
+  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  will-change: transform, opacity;
+  cursor: zoom-out;
+
+  &.visible {
+    pointer-events: all;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.9);
+  }
+
+  figcaption {
+    position: fixed;
+    background: rgba(255, 255, 255, 0.95);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 0.5rem;
+  }
+}

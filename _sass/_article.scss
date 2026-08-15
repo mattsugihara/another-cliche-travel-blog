@@ -1,0 +1,61 @@
+@use "variables";
+
+article {
+  width: 100%;
+  max-width: 960px;
+  padding: 0rem 1rem 4.5rem 1rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 2rem;
+
+  /* Medium & Up */
+  @media screen and (min-width: variables.$medium-breakpoint) {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.trip-title {
+  @include variables.font-title();
+  max-width: 960px;
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin: 0 auto;
+}
+
+.post-header {
+  display: flex;
+  flex-direction: column;
+
+  /* Medium & Up */
+  @media screen and (min-width: variables.$medium-breakpoint) {
+    & {
+      align-items: end;
+    }
+
+    a {
+      display: block;
+      text-align: right;
+    }
+  }
+}
+
+.post-metadata {
+  @include variables.font-caption();
+  padding-bottom: 0.25rem;
+
+  time,
+  .day-count,
+  .post-location {
+    display: block;
+  }
+}
+
+h1,
+h2 {
+  @include variables.font-headline();
+  margin: 0.25rem 0 0.5rem 0;
+
+  a {
+    color: variables.$primary-text;
+  }
+}

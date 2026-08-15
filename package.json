@@ -1,0 +1,25 @@
+{
+  "name": "another-cliche-travel-blog",
+  "version": "1.0.0",
+  "description": "This is just a place where I keep a journal of the places I go.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattsugihara/another-cliche-travel-blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mattsugihara/another-cliche-travel-blog/issues"
+  },
+  "homepage": "https://github.com/mattsugihara/another-cliche-travel-blog#readme",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.11.0",
+    "prettier": "^3.9.6"
+  }
+}

@@ -1,0 +1,52 @@
+@use "variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  @include variables.font-body();
+  border: 0;
+  outline: 0;
+  background: variables.$background-color;
+  word-wrap: break-word;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$link-color;
+}
+
+p {
+  padding-bottom: 1rem;
+}
+
+ol,
+ul {
+  margin-left: 2rem;
+  padding-bottom: 1rem;
+}
+
+button {
+  font-family: variables.$secondary-font-family;
+  color: variables.$secondary-text;
+  border: 1px solid variables.$secondary-text;
+  padding: 0.75rem;
+
+  &:hover {
+    background: variables.$primary-text;
+    color: white;
+    transition: all ease 350ms;
+  }
+
+  &:hover {
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+figcaption {
+  @include variables.font-caption();
+}
