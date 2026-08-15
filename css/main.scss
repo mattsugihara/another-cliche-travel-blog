@@ -194,14 +194,21 @@ figcaption {
 
 article {
   width: 100%;
-  max-width: 640px;
+  max-width: 960px;
   padding: 0rem 1rem 4.5rem 1rem;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0 2rem;
+
+  /* Medium & Up */
+  @media screen and (min-width: 48rem) {
+    grid-template-columns: 1fr 2fr;
+  }
 }
 
 .trip-title {
-  width: 100%;
-  max-width: 640px;
+  max-width: 960px;
   padding: 2rem 1rem 1.5rem 1rem;
   margin: 0 auto;
 }
@@ -210,24 +217,40 @@ article {
   display: flex;
   flex-direction: column;
 
-  .post-metadata {
-    font-family: $secondary-font-family;
-    text-transform: uppercase;
-    font-weight: 300;
-    font-size: $small-font-size;
-    line-height: 1;
-    color: $secondary-text;
-    padding-bottom: 0.25rem;
-  }
-
-  h1,
-  h2 {
-    order: 2;
-    margin: 0.25rem 0 0.5rem 0;
+  /* Medium & Up */
+  @media screen and (min-width: 48rem) {
+    & {
+      align-items: end;
+    }
 
     a {
-      color: $primary-text;
+      display: block;
+      text-align: right;
     }
+  }
+}
+.post-metadata {
+  font-family: $secondary-font-family;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: $small-font-size;
+  line-height: 1.5;
+  color: $secondary-text;
+  padding-bottom: 0.25rem;
+
+  time,
+  .day-count,
+  .post-location {
+    display: block;
+  }
+}
+
+h1,
+h2 {
+  margin: 0.25rem 0 0.5rem 0;
+
+  a {
+    color: $primary-text;
   }
 }
 
