@@ -1,0 +1,21 @@
+{% assign current_slug = page.url | remove: "/" %} {% assign prev_slug = "" %}
+{% assign prev_name = "" %} {% assign next_slug = "" %} {% assign next_name = ""
+%} {% assign last_slug = "" %} {% assign last_name = "" %} {% assign
+found_current = false %} {% for trip in site.data.trips %} {% assign slug =
+trip[0] %} {% if slug != "shenanigans" and site.categories[slug].size > 0 %} {%
+if slug == current_slug %} {% assign prev_slug = last_slug %} {% assign
+prev_name = last_name %} {% assign found_current = true %} {% elsif
+found_current and next_slug == "" %} {% assign next_slug = slug %} {% assign
+next_name = trip[1] %} {% endif %} {% assign last_slug = slug %} {% assign
+last_name = trip[1] %} {% endif %} {% endfor %}
+<div class="pagination">
+  {% if prev_slug != "" %}
+  <a href="/{{ prev_slug }}/">← {{ prev_name }}</a>
+  {% else %}
+  <span class="disabled">←</span>
+  {% endif %} {% if next_slug != "" %}
+  <a href="/{{ next_slug }}/">{{ next_name }} →</a>
+  {% else %}
+  <span class="disabled">→</span>
+  {% endif %}
+</div>

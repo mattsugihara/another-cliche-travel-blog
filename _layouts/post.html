@@ -8,6 +8,7 @@ layout: default
     <time datetime="{{ page.date | date_to_xmlschema }}">
       {{ page.date | date: "%B %-d, %Y" }}
     </time>
+    {% include day-number.html post=page %}
   </header>
   <div class="post">{{ page.content }}</div>
 </article>

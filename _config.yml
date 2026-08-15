@@ -11,9 +11,6 @@ markdown: kramdown
 # (at least locally), for some reason
 # incremental: true;
 
-# Number of entries per page
-paginate: 10
-
 # This resizes all images. One entry per trip, listed alphabetically
 # mini_magick:
 #     costa-rica-small:
@@ -95,7 +92,3 @@ defaults:
       path: ""
     values:
       layout: "post"
-
-# This makes pagination work
-plugins:
-  - jekyll-paginate

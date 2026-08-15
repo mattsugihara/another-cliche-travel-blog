@@ -1,12 +1,16 @@
+<h1 class="trip-title">{{ site.data.trips[include.category] }}</h1>
 {% for post in site.categories[include.category] reversed %}
 <article>
   <header class="post-header">
     <h2>
       <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
     </h2>
-    <time datetime="{{ post.date | date_to_xmlschema }}">
-      {{ post.date | date: "%B %-d, %Y" }}
-    </time>
+    <div class="post-metadata">
+      <time datetime="{{ post.date | date_to_xmlschema }}">
+        {{ post.date | date: "%B %-d, %Y" }}
+      </time>
+      • {% include day-number.html post=post %}
+    </div>
   </header>
   <div class="post">{{ post.content }}</div>
 </article>

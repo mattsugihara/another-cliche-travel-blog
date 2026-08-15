@@ -1,21 +1,21 @@
 # Destinations shown in the nav menu, in display order.
 # Add a new trip here (slug: Display Name) and it shows up automatically -
 # no need to touch _layouts/feed.html.
-thailand: Thailand
-india: India
-singapore: Singapore
-costa-rica: Costa Rica
-iceland: Iceland and Norway
-kauai: Kauai
-cuba: Cuba
-kalalau: Kalalau
-banff: Banff
-taiwan: Taiwan
-azores: Azores
-zurich: Zurich
-basque: Basque Country
-japan: Japan
-italy: Italy
-paris: Paris & Barcelona
-champagne: Bordeaux & Champagne
-shenanigans: Shenanigans
+thailand: Thailand 2015
+india: India 2016
+singapore: Singapore 2016
+costa-rica: Costa Rica 2016
+iceland: Iceland and Norway 2016
+kauai: Kauai 2016
+cuba: Cuba 2016
+kalalau: Kalalau 2017
+banff: Banff 2017
+taiwan: Taiwan 2017
+azores: Azores 2018
+zurich: Zurich 2019
+basque: Basque Country 2023
+japan: Japan 2024
+italy: Italy 2025
+paris: Paris & Barcelona 2025
+champagne: Bordeaux & Champagne 2026
+shenanigans: Shenanigans 2015

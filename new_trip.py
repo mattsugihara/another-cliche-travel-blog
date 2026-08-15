@@ -11,6 +11,7 @@ import argparse
 import re
 import sys
 import unicodedata
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -21,8 +22,10 @@ INDEX_TEMPLATE = """---
 layout: feed
 image: "{cover}"
 permalink: "/{slug}/"
+start_at_zero: true
 ---
-{{% include trip-feed.html category="{slug}" %}}
+
+{{% include trip-feed.html category="{slug}" %}} {{% include adjacent-trips.html %}}
 """
 
 
@@ -51,7 +54,8 @@ def main():
     parser.add_argument("destination", help='Destination name, e.g. "New Zealand"')
     parser.add_argument("--slug", help="Override the auto-derived slug")
     parser.add_argument(
-        "--display-name", help="Override the nav label (default: destination as typed)"
+        "--display-name",
+        help="Override the nav label (default: destination + current year)",
     )
     parser.add_argument(
         "--cover-image",
@@ -68,7 +72,7 @@ def main():
         sys.exit(
             f"error: could not derive a slug from {args.destination!r}; pass --slug explicitly"
         )
-    display_name = args.display_name or args.destination
+    display_name = args.display_name or f"{args.destination} {date.today().year}"
 
     trip_dir = ROOT / "trips" / slug
     posts_dir = trip_dir / "_posts"

@@ -199,12 +199,18 @@ article {
   margin: 0 auto;
 }
 
+.trip-title {
+  width: 100%;
+  max-width: 640px;
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin: 0 auto;
+}
+
 .post-header {
   display: flex;
   flex-direction: column;
 
-  time {
-    order: 1;
+  .post-metadata {
     font-family: $secondary-font-family;
     text-transform: uppercase;
     font-weight: 300;
