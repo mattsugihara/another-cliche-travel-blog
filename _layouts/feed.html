@@ -2,36 +2,7 @@
 layout: default
 ---
 <header>
-  <div id="cover" data-image="{{ page.image }}">
-    <div>
-      <h1>another cliché<br />travel blog</h1>
-      <h2>a poorly kept travel journal</h2>
-      <button id="show-navigation">see a particular trip</button>
-    </div>
-  </div>
-  <nav>
-    <ul>
-      {% for trip in site.data.trips %}
-        <li>
-          <a href="/{{ trip[0] }}/" id="nav-{{ trip[0] }}">{{ trip[1] }}</a>
-        </li>
-      {% endfor %}
-      <li><a href="/" id="nav-all">Latest Trip</a></li>
-    </ul>
-    <button id="hide-navigation">
-      <svg
-        width="48"
-        height="48"
-        viewBox="0 0 48 48"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M21.88 23.293L5.614 39.556l.707.707L22.586 24l17.677 17.678.708-.707-17.677-17.677 16.97-16.97-.707-.708-16.97 16.97L7.03 7.03l-.708.707L21.88 23.293z"
-          fill="#FFF"
-          fill-rule="evenodd"
-        />
-      </svg>
-    </button>
-  </nav>
+  {% include cover.html %}
+  {% include nav.html %}
 </header>
 {{ content }}
