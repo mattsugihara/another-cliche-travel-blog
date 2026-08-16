@@ -1,0 +1,16 @@
+@use "variables";
+
+.trip-title {
+  @include variables.font-title();
+  max-width: 960px;
+  padding: 2rem 1rem 1.5rem 1rem;
+  margin: 0 auto;
+}
+
+.pagination {
+  display: flex;
+
+  > * {
+    flex-grow: 1;
+  }
+}
