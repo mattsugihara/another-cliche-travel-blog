@@ -1,20 +1,20 @@
-var allImages = document.querySelectorAll(".image-figure");
+var coverImage = new Image();
+var lightboxTrigger = null;
+const allImages = document.querySelectorAll(".image-figure");
 
-for (var i = allImages.length - 1; i >= 0; i--) {
-  allImages[i].id = "figure-number-" + i;
-  lightboxListener("figure-number-" + i);
+for (const [index, image] of allImages.entries()) {
+  image.id = `figure-number-${index}`;
+  addLightboxListener(`figure-number-${index}`);
 }
 
 if ("ontouchstart" in document.documentElement) {
   document.querySelector("body").classList.add("supports-touch");
 }
 
-var coverImage = new Image();
-
 coverImage.onload = function () {
   document
     .querySelector("#cover")
-    .setAttribute("style", "background-image: url(" + coverImage.src + ");");
+    .setAttribute("style", `background-image: url(${coverImage.src});`);
 };
 
 coverImage.src = document.querySelector("#cover").getAttribute("data-image");
@@ -25,75 +25,64 @@ function panImage(event) {
   let cursorY = event.clientY;
   let windowWidth = document.documentElement.clientWidth;
   let windowHeight = document.documentElement.clientHeight;
-  let imageWidth = img.offsetWidth; //There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
-  console.log("imageWidth: " + imageWidth);
-  console.log("img.width: " + img.width);
+  let imageWidth = img.offsetWidth; // There's a race condition here. image width sometimes = 0, resulting in the image being positioned at the cursor
   let imageHeight = img.offsetHeight;
 
   window.requestAnimationFrame(function () {
     let left = -((imageWidth - windowWidth) * (cursorX / windowWidth)) + "px";
     let top = -((imageHeight - windowHeight) * (cursorY / windowHeight)) + "px";
-    img.setAttribute("style", "transform: translate(" + left + "," + top + ")");
+    img.setAttribute("style", `transform: translate(${left},${top})`);
   });
 }
 
 function getImage(figureID) {
   const image = document.querySelector("#lightbox img");
+  const thumbnail = document.querySelector(`#${figureID} img`);
   let imageBuffer = new Image();
 
   imageBuffer.onload = function () {
     image.src = this.src;
   };
-  imageBuffer.src = document.querySelector("#" + figureID + " a").href;
+  imageBuffer.src = document.querySelector(`#${figureID} a`).href;
+  image.alt = thumbnail.alt;
+}
+
+function handleLightboxPan() {
+  panImage(event);
 }
 
 function openLightbox(figureID) {
-  if (document.querySelector("#" + figureID + " figcaption")) {
+  if (document.querySelector(`#${figureID} figcaption`)) {
     let imgCaption = document.querySelector(
-      "#" + figureID + " figcaption",
+      `#${figureID} figcaption`,
     ).innerText;
 
     document.querySelector("#lightbox figure").innerHTML +=
-      "<figcaption>" + imgCaption + "</figcaption";
+      `<figcaption>${imgCaption}</figcaption>`;
   }
 
   getImage(figureID);
 
-  document.querySelector("#lightbox").classList.add("visible");
-  document.querySelector("body").setAttribute("style", "overflow: hidden");
+  lightboxTrigger = document.querySelector(`#${figureID} a`);
+  document.querySelector("#lightbox").showModal();
 
   if (!document.querySelector("body").classList.contains("supports-touch")) {
-    document.addEventListener("mousemove", function () {
-      panImage(event);
-    });
+    document.addEventListener("mousemove", handleLightboxPan);
   }
 }
 
 function closeLightbox() {
-  document.querySelector("#lightbox").classList.remove("visible");
-  document.querySelector("#lightbox figure").innerHTML = "<img>";
-  document.removeEventListener("mousemove", function () {
-    panImage(event);
-  });
-  document.querySelector("body").removeAttribute("style");
-}
-
-function parseKeyPress(event) {
-  switch (event.keyCode) {
-    case 27:
-      closeLightbox();
-      break;
-  }
+  document.querySelector("#lightbox").close();
 }
 
 function toggleNav() {
   document.querySelector("body").classList.toggle("mobile-nav-shown");
 }
 
-function lightboxListener(figureID) {
+function addLightboxListener(figureID) {
   document
-    .querySelector("#" + figureID + " a")
-    .addEventListener("click", function () {
+    .querySelector(`#${figureID} a`)
+    .addEventListener("click", function (event) {
       event.preventDefault();
       openLightbox(figureID);
     });
@@ -102,6 +91,13 @@ function lightboxListener(figureID) {
 document.querySelector("#show-navigation").addEventListener("click", toggleNav);
 document.querySelector("#hide-navigation").addEventListener("click", toggleNav);
 document.querySelector("#lightbox").addEventListener("click", closeLightbox);
-document.addEventListener("keydown", function () {
-  parseKeyPress(event);
+
+document.querySelector("#lightbox").addEventListener("close", function () {
+  document.querySelector("#lightbox figure").innerHTML = "<img>";
+  document.removeEventListener("mousemove", handleLightboxPan);
+
+  if (lightboxTrigger) {
+    lightboxTrigger.focus();
+    lightboxTrigger = null;
+  }
 });

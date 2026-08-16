@@ -10,11 +10,20 @@
   <body>
     {{ content }}
 
-    <div id="lightbox">
+    <dialog id="lightbox" aria-label="Photo viewer">
+      <button id="lightbox-close" aria-label="Close">
+        <svg width="32" height="32" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M21.88 23.293L5.614 39.556l.707.707L22.586 24l17.677 17.678.708-.707-17.677-17.677 16.97-16.97-.707-.708-16.97 16.97L7.03 7.03l-.708.707L21.88 23.293z"
+            fill="#FFF"
+            fill-rule="evenodd"
+          />
+        </svg>
+      </button>
       <figure>
         <img>
       </figure>
-    </div>
+    </dialog>
     <script src="/js/travel-blog.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Oswald:300,700" rel="stylesheet">
     <script>
