@@ -1,5 +1,13 @@
 @use "variables";
 
+.feed {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  display: grid;
+  gap: 4.5rem;
+}
 .trip-title {
   @include variables.font-title();
   max-width: 960px;
