@@ -6,26 +6,17 @@
   {%- if trip_page.start_at_zero -%}
     {%- assign day_offset = 0 -%}
   {%- endif -%}
-  {%- assign trip_posts = site.categories[trip_slug] | reverse -%}
   {%- assign start_date = trip_page.start_date -%}
   {%- if start_date == null -%}
-    {%- assign first_post = trip_posts | first -%}
-    {%- assign start_date = first_post.date -%}
+    {%- assign trip_posts = site.categories[trip_slug] | reverse -%}
+    {%- assign start_date = trip_posts.first.date -%}
   {%- endif -%}
   {%- assign start_ts = start_date | date: '%s' | plus: 0 -%}
   {%- assign post_ts = include.post.date | date: '%s' | plus: 0 -%}
   {%- if post_ts >= start_ts -%}
-    {%- assign day_number = -1 -%}
-    {%- assign counted_index = 0 -%}
-    {%- for p in trip_posts -%}
-      {%- assign p_ts = p.date | date: '%s' | plus: 0 -%}
-      {%- if p_ts >= start_ts -%}
-        {%- if p.url == include.post.url -%}
-          {%- assign day_number = day_offset | plus: counted_index -%}
-        {%- endif -%}
-        {%- assign counted_index = counted_index | plus: 1 -%}
-      {%- endif -%}
-    {%- endfor -%}
+    {%- comment -%} ponytail: assumes post dates are always midnight (no time-of-day); if that ever changes, normalize both dates through `| date: '%Y-%m-%d' | date: '%s'` before diffing {%- endcomment -%}
+    {%- assign day_diff = post_ts | minus: start_ts | divided_by: 86400 -%}
+    {%- assign day_number = day_offset | plus: day_diff -%}
     <span class="day-count">Day {{ day_number }}</span>
   {%- endif -%}
 {%- endif -%}

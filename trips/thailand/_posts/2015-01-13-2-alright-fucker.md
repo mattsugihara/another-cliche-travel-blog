@@ -1,6 +1,6 @@
 ---
 title: "Alright, fucker"
-location: [Sebastopol, San Rafael, San Francisco]
+location: [San Francisco]
 ---
 
 Let's do this
