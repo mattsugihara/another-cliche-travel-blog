@@ -27,6 +27,14 @@ $medium-breakpoint: 48rem;
   color: $primary-text;
 }
 
+@mixin font-subhead {
+  font-family: $secondary-font-family;
+  font-size: 1.25rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: $primary-text;
+}
+
 @mixin font-body {
   font-family: $base-font-family;
   font-size: 1.25rem;

@@ -50,8 +50,11 @@ article {
   }
 }
 
-h1,
-h2 {
+.post {
+  margin-top: 12px;
+}
+
+.post-title {
   @include variables.font-headline();
   margin: 0.25rem 0 0.5rem 0;
 

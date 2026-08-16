@@ -1,7 +1,0 @@
-<h1 class="trip-title">{{ site.data.trips[include.category] }}</h1>
-{% for post in site.categories[include.category] reversed %}
-  <article>
-    {% include post-header.html post=post tag="h2" link=true %}
-    <div class="post">{{ post.content }}</div>
-  </article>
-{% endfor %}

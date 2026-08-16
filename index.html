@@ -8,24 +8,10 @@ image: "/images/covers/bg-medium.jpg"
   }
 </style>
 {% assign latest_slug = '' %}
-{% assign latest_name = '' %}
-{% assign previous_slug = '' %}
-{% assign previous_name = '' %}
 {% for trip in site.data.trips %}
   {% assign slug = trip[0] %}
   {% if slug != 'shenanigans' and site.categories[slug].size > 0 %}
-    {% assign previous_slug = latest_slug %}
-    {% assign previous_name = latest_name %}
     {% assign latest_slug = slug %}
-    {% assign latest_name = trip[1] %}
   {% endif %}
 {% endfor %}
-{%
-  include trip-feed.html
-  category=latest_slug
-%}
-{% if previous_slug != '' %}
-  <div class="pagination">
-    <a href="/{{ previous_slug }}/">← {{ previous_name }}</a>
-  </div>
-{% endif %}
+{% include feed.html category=latest_slug %}
