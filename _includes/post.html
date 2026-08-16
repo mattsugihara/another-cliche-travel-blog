@@ -15,5 +15,6 @@
       <span class="post-location">{{ include.post.location | join: ', ' }}</span>
     </div>
   </header>
-  <div class="post-body">{{ include.post.content }}</div>
+  {%- assign heading_offset = include.heading_offset | default: 0 -%}
+  <div class="post-body">{{ include.post.content | shift_headings: heading_offset }}</div>
 </article>
