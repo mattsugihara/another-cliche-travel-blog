@@ -1,5 +1,5 @@
 ---
-title: "Larkspur ferry, again"
+title: Larkspur ferry, again
 location: Larkspur
 ---
 

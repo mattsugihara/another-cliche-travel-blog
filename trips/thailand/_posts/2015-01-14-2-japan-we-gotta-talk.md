@@ -1,5 +1,5 @@
 ---
-title: "Japan, we gotta talk"
+title: Japan, we gotta talk
 location: Narita
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Larkspur Ferry"
+title: Larkspur Ferry
 location: [Sebastopol, San Francisco]
 ---
 

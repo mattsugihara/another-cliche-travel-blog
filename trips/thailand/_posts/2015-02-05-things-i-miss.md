@@ -1,5 +1,5 @@
 ---
-title: "Things I Miss"
+title: Things I Miss
 location: Chiang Mai
 ---
 

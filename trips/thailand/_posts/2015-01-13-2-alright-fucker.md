@@ -1,5 +1,5 @@
 ---
-title: "Alright, fucker"
+title: Alright, fucker
 location: [San Francisco]
 ---
 

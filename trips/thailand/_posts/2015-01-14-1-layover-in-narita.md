@@ -1,5 +1,5 @@
 ---
-title: "Layover at Narita"
+title: Layover at Narita
 location: Narita
 ---
 

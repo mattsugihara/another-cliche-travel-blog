@@ -1,5 +1,5 @@
 ---
-title: "I'm spending 5 weeks in Thailand"
+title: I'm spending 5 weeks in Thailand
 location: San Francisco
 ---
 

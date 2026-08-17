@@ -1,5 +1,5 @@
 ---
-title: "Sore throat"
+title: Sore throat
 location: San Francisco
 ---
 

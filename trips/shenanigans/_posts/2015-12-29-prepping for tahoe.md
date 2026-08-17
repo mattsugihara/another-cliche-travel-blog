@@ -1,5 +1,5 @@
 ---
-title: "Prepping for Tahoe"
+title: Prepping for Tahoe
 location: Tahoe
 ---
 

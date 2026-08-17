@@ -1,5 +1,5 @@
 ---
-title: "Night Train to Surat Tani"
+title: Night Train to Surat Tani
 location: [Bangkok, Surat Thani]
 ---
 

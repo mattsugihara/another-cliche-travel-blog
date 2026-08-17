@@ -1,5 +1,5 @@
 ---
-title: "These Guys"
+title: These Guys
 location: Koh Tao
 ---
 

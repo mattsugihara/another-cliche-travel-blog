@@ -1,5 +1,5 @@
 ---
-title: "My Friends are Unmitigated Badasses"
+title: My Friends are Unmitigated Badasses
 location: Chiang Mai
 ---
 

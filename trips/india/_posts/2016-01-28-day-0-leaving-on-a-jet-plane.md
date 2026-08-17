@@ -1,5 +1,5 @@
 ---
-title: "Leaving on a jet plane"
+title: Leaving on a jet plane
 location: San Francisco
 ---
 

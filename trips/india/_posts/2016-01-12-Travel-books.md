@@ -1,5 +1,5 @@
 ---
-title: "I hate travel books"
+title: I hate travel books
 location: Larkspur
 ---
 

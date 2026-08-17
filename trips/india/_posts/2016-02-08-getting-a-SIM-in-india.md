@@ -1,5 +1,5 @@
 ---
-title: "Getting a SIM in India"
+title: Getting a SIM in India
 location: [Delhi, McLeod Ganj]
 ---
 
