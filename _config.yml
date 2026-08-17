@@ -2,7 +2,7 @@
 title: another cliché travel blog
 
 # the base hostname & protocol for your site
-url: "http://antoherclichetravelblog.com"
+url: "https://anotherclichetravelblog.com"
 
 # Build settings
 markdown: kramdown
