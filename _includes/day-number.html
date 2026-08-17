@@ -1,7 +1,7 @@
 {%- assign trip_slug = include.post.categories[1] -%}
 {%- assign trip_url = '/' | append: trip_slug | append: '/' -%}
 {%- assign trip_page = site.pages | where: 'url', trip_url | first -%}
-{%- if trip_page.day_count != false -%}
+{%- if trip_page.show_day_count != false -%}
   {%- assign day_offset = 1 -%}
   {%- if trip_page.start_at_zero -%}
     {%- assign day_offset = 0 -%}

@@ -22,10 +22,12 @@ INDEX_TEMPLATE = """---
 layout: feed
 image: "{cover}"
 permalink: "/{slug}/"
-start_at_zero: true
+# show_day_count: false
+# start_at_zero: true
+# start_date: YYYY-MM-DD
 ---
 
-{{% include trip-feed.html category="{slug}" %}} {{% include adjacent-trips.html %}}
+{{% include feed.html category="{slug}" %}}
 """
 
 

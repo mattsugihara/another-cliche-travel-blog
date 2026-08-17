@@ -46,5 +46,5 @@ render:
 - `start_at_zero: true` - day numbers start at 0 instead of 1
 - `start_date: YYYY-MM-DD` - posts dated before this get no day number
   (for pre-trip filler posts, e.g. packing days before departure)
-- `day_count: false` - disables day numbers for the whole trip (e.g.
+- `show_day_count: false` - disables day numbers for the whole trip (e.g.
   Shenanigans, which is a grab-bag of small outings, not one day-by-day trip)
