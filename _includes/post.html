@@ -8,7 +8,7 @@
       {% endif %}
     </{{ include.tag }}>
     <div class="post-metadata">
-      <time datetime="{{ include.post.date | date_to_xmlschema }}">
+      <time class="date" datetime="{{ include.post.date | date_to_xmlschema }}">
         {{ include.post.date | date: '%B %-d, %Y' }}
       </time>
       {% include day-number.html post=include.post %}

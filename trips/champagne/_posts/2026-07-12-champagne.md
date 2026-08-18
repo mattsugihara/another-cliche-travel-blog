@@ -1,5 +1,5 @@
 ---
-title: Day 0 (Saturday)
+title: Packing and travel
 location: [Redwood City, Zurich, Paris]
 ---
 
@@ -13,7 +13,7 @@ Our flight took off right around sunset and with the storms in the pacific made 
 
 The flight was pretty easy and passed relatively quickly. Slept for half of it, watched most of Chernobyl. Dinner and breakfast were both pretty unremarkable.
 
-Landing in Zurich we were immediately greeted by the heat. Fortunately, while the new EES passport control was definitely slower, the lines were short, so it wasn't too bad getting through despite our relatively short layover. I pretty much slept through the entire flight, waking up as we hit the ground.
+Landing in Zurich we were immediately greeted by the heat. Fortunately, while the new EES passport control was definitely slower, the lines were short, so it wasn't too bad getting through despite our relatively short layover. I pretty much slept through the entire flight, only waking up when we hit the ground.
 
 We picked up our bags, got in a cab, and figured we had just enough time to join the rest of the group on a boat ride on the Seine. We took a couple minutes to freshen up, and then grabbed a car to the quai. The boat was a beautiful classic Reinell.
 

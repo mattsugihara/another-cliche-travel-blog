@@ -41,7 +41,7 @@ article {
   @include variables.font-caption();
   padding-bottom: 0.25rem;
 
-  time,
+  .date,
   .day-count,
   .post-location {
     display: block;
@@ -52,6 +52,7 @@ article {
   margin-top: 0.5rem;
 }
 
+h2,
 h3 {
   @include variables.font-subhead();
 }

@@ -3,7 +3,7 @@ title: La Sagrada Familia
 location: Barcelona
 ---
 
-We woke up (relatively) early, after a night I spent trying to sleep and instead heard the church bells chime out the hours (maybe it was the espresso martini from Sips, maybe it was the bright light). Chris walked Katie and I over to [Jaç](https://www.instagram.com/jac.barcelona/) for coffee (I would have loved to hang out there for an hour). In line we made friends with a dog named Boomer and his owners, who had recently moved from LA and chatted with us about the dog immigration process.
+We woke up (relatively) early, after a night I spent trying to sleep and instead heard the church bells chime out the hours (maybe it was the espresso martini from [Sips](https://sips.barcelona/drinkery-house/), maybe it was the bright light). Chris walked Katie and I over to [Jaç](https://www.instagram.com/jac.barcelona/) for coffee (I would have loved to hang out there for an hour). In line we made friends with a dog named Boomer and his owners, who had recently moved from LA and chatted with us about the dog immigration process.
 
 We took our coffees to go and headed to La Sagrada Familia. Words still fail. This time, we went up the Passion Tower, which gave us a good view of the city all the way to the ocean. Post, we got another coffee from [Blackbird](https://www.instagram.com/blackbird.coffeecorner), and struck up a conversation with a group from Milwaukee. Two couples with about twenty years apart—One from the bay originally.
 

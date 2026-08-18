@@ -9,8 +9,8 @@ Woke up, got a quick breakfast and coffee from the hotel. At 9:30am, the van arr
 
 This was actually a staircase leading down to some of their older bottles, including one from 1929.
 
-Post Ruinart, we grabbed lunch, then went to two much smaller producers. The first, P. Lancelot-Royer, produces only 25k bottles a year. None of us particularly cared for his wine (though we did find that despite being a fairly small producer, we can get it through K&L), but found it extremely cool that he and his father hand-dung an extension of his cellar using a pick and chainsaw.
+Post Ruinart, we grabbed lunch, then went to two much smaller producers. The first, [P. Lancelot-Royer](https://www.google.com/maps/search/?api=1&query=P.+Lancelot-Royer+Cramant), produces only 25k bottles a year. None of us particularly cared for his wine (though we did find that despite being a fairly small producer, we can get it through K&L), but found it extremely cool that he and his father hand-dung an extension of his cellar using a pick and chainsaw.
 
 The next place, \*\*\*-Gomet, the wine was much nicer. The wines were better, more interesting.
 
-We recollected ourselves at the hotel, then got food from Le Sardaigne. Nothing remarkable, but after 11 "tastes", a brie and ham pizza was pretty tasty. After that, we all went to bed.
+We recollected ourselves at the hotel, then got food from [Le Sardaigne](http://www.lesardaigne.fr/). Nothing remarkable, but after 11 "tastes", a brie and ham pizza was pretty tasty. After that, we all went to bed.
